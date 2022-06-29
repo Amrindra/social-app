@@ -1,3 +1,8 @@
+:root {
+  --topNavbar-bg-color: #222;
+  --topNavbar-text-color: rgb(247, 247, 247);
+}
+
 * {
   margin: 0;
   padding: 0;
