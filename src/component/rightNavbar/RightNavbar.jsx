@@ -1,7 +1,7 @@
 import "./RightNavbar.scss";
 
 const RightNavbar = () => {
-  return <div>Right</div>;
+  return <div className="rightNavbar">Right</div>;
 };
 
 export default RightNavbar;

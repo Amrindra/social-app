@@ -1,0 +1,23 @@
+.leftNavbar{
+  flex: 3;
+  //if we don't use calc here it will overflow because topNavbar is sitting on it so we have to subtract the height of topNavbar which 70px
+  height:calc( 100vh -70px);
+  background-color: wheat;
+
+  .leftNavbar_wrapper{
+    padding: 20px;
+
+    .leftNavbar_lists{
+      padding: 0;
+      margin: 0;
+      list-style: none;
+
+      .leftNavbar_list_item{
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+    }
+
+  }
+}
