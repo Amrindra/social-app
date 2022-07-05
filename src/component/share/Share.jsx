@@ -1,4 +1,4 @@
-import { PermMedia } from "@material-ui/icons";
+import { EmojiEmotions, Label, PermMedia, Room } from "@material-ui/icons";
 import "./Share.scss";
 
 const Share = () => {
@@ -13,7 +13,7 @@ const Share = () => {
           />
           <input
             type="text"
-            placeholder="What's on your mind?"
+            placeholder="Start a post"
             className="share_input"
           />
         </div>
@@ -23,10 +23,23 @@ const Share = () => {
         <div className="share_bottom">
           <div className="share_options">
             <div className="share_option_item">
-              <PermMedia className="share_icon" />
+              <PermMedia htmlColor="lightblue" className="share_icon" />
               <span className="share_option_text">Photo or Video</span>
             </div>
+            <div className="share_option_item">
+              <Label htmlColor="blue" className="share_icon" />
+              <span className="share_option_text">Tag</span>
+            </div>
+            <div className="share_option_item">
+              <Room htmlColor="orange" className="share_icon" />
+              <span className="share_option_text">Location </span>
+            </div>
+            <div className="share_option_item">
+              <EmojiEmotions htmlColor="tomato" className="share_icon" />
+              <span className="share_option_text">Feelings</span>
+            </div>
           </div>
+          <button className="share_button">Post</button>
         </div>
       </div>
     </div>

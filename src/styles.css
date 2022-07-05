@@ -24,3 +24,10 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar {
   /* display: none; */
 }
+
+hr {
+  height: 1px;
+  border-width: 0;
+  color: lightgray;
+  background-color: lightgray;
+}
