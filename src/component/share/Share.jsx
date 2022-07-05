@@ -1,3 +1,4 @@
+import { PermMedia } from "@material-ui/icons";
 import "./Share.scss";
 
 const Share = () => {
@@ -16,7 +17,17 @@ const Share = () => {
             className="share_input"
           />
         </div>
-      
+
+        <hr className="share_hr" />
+
+        <div className="share_bottom">
+          <div className="share_options">
+            <div className="share_option_item">
+              <PermMedia className="share_icon" />
+              <span className="share_option_text">Photo or Video</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
