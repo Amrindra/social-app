@@ -1,4 +1,8 @@
-import { MoreVert } from "@material-ui/icons";
+import {
+  FavoriteBorder,
+  MoreVert,
+  ThumbUpAltOutlined
+} from "@material-ui/icons";
 import "./Post.scss";
 
 const Post = () => {
@@ -15,15 +19,31 @@ const Post = () => {
             <span className="post_user_name">King Dev</span>
             <span className="post_date">10 mins ago</span>
           </div>
-
           <div className="post_top_right">
             <MoreVert />
           </div>
         </div>
 
-        <div className="post_center"></div>
+        <div className="post_center">
+          <span className="post_text">Testing my post :D</span>
+          <img
+            src="https://github.com/safak/youtube/blob/react-social-ui/public/assets/post/1.jpeg?raw=true"
+            alt=""
+            className="post_img"
+          />
+        </div>
 
-        <div className="post_bottom"></div>
+        <div className="post_bottom">
+          <div className="post_bottom_left">
+            <ThumbUpAltOutlined className="like_icon" />
+            <FavoriteBorder className="like_icon" />
+            <span className="post_like_counter">100</span>
+          </div>
+          <div className="post_bottom_right">
+            <span className="post_comment_text">10 comments</span>
+            <span className="post_share">10 shares</span>
+          </div>
+        </div>
       </div>
     </div>
   );

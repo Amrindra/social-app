@@ -21,9 +21,9 @@ body::-webkit-scrollbar-thumb {
   background-color: rgb(171, 81, 81);
 } */
 
-body::-webkit-scrollbar {
-  /* display: none; */
-}
+/* body::-webkit-scrollbar {
+  display: none;
+} */
 
 hr {
   height: 1px;
