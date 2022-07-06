@@ -39,7 +39,7 @@ const Share = () => {
               <span className="share_option_text">Feelings</span>
             </div>
           </div>
-          <button className="share_button">Post</button>
+          <button className="share_button">Share</button>
         </div>
       </div>
     </div>

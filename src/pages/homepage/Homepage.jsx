@@ -6,7 +6,7 @@ import "./Homepage.scss";
 
 const Homepage = () => {
   return (
-    <div className="homepage">
+    <>
       <TopNavbar />
 
       <secion className="homepage_container">
@@ -14,7 +14,7 @@ const Homepage = () => {
         <Feed />
         <RightNavbar />
       </secion>
-    </div>
+    </>
   );
 };
 
