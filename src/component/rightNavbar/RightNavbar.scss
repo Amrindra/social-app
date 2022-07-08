@@ -6,8 +6,8 @@
     margin-left: 10px;
     // background-color: lightblue;
     border-radius: 10px;
-    -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
-    box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+    -webkit-box-shadow: var(--webkit-box-shadow);
+    box-shadow: var(--box-shadow);
 
 
     ul{

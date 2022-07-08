@@ -1,6 +1,8 @@
 :root {
   --topNavbar-bg-color: #222;
   --topNavbar-text-color: rgb(247, 247, 247);
+  --webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+  --box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
 }
 
 * {
