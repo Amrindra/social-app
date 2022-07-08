@@ -1,3 +1,21 @@
 .rightNavbar{
   flex: 3.5;
+
+  .rightNavbar_wrapper{
+    padding: 20px;
+    margin-left: 10px;
+    // background-color: lightblue;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+    box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+
+
+    ul{
+      margin-left: 20px;
+      margin-top: 15px;
+      li{
+        padding: 5px 0;
+      }
+    }
+  }
 }

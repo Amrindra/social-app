@@ -1,11 +1,16 @@
 import {
+  Favorite,
   FavoriteBorder,
   MoreVert,
+  ThumbUpAlt,
   ThumbUpAltOutlined
 } from "@material-ui/icons";
+import { useState } from "react";
 import "./Post.scss";
 
 const Post = () => {
+  const [likeIcon, setLikeIcon] = useState(false);
+
   return (
     <div className="post_container">
       <div className="post_wrapper">
@@ -35,8 +40,12 @@ const Post = () => {
 
         <div className="post_bottom">
           <div className="post_bottom_left">
-            <ThumbUpAltOutlined className="like_icon" />
-            <FavoriteBorder className="like_icon" />
+            {likeIcon ? (
+              <ThumbUpAlt />
+            ) : (
+              <ThumbUpAltOutlined className="like_icon" />
+            )}
+            {likeIcon ? <Favorite /> : <FavoriteBorder className="like_icon" />}
             <span className="post_like_counter">100</span>
           </div>
           <div className="post_bottom_right">

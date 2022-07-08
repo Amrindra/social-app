@@ -31,12 +31,12 @@ const Share = () => {
               <span className="share_option_text">Tag</span>
             </div>
             <div className="share_option_item">
-              <Room htmlColor="orange" className="share_icon" />
-              <span className="share_option_text">Location </span>
-            </div>
-            <div className="share_option_item">
               <EmojiEmotions htmlColor="tomato" className="share_icon" />
               <span className="share_option_text">Feelings</span>
+            </div>
+            <div className="share_option_item">
+              <Room htmlColor="orange" className="share_icon" />
+              <span className="share_option_text">Location </span>
             </div>
           </div>
           <button className="share_button">Share</button>
