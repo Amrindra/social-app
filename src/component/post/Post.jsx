@@ -17,7 +17,7 @@ const Post = () => {
         <div className="post_top">
           <div className="post_top_left">
             <img
-              src="https://github.com/safak/youtube/blob/react-social-ui/public/assets/person/1.jpeg?raw=true"
+              src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
               alt="profile_picture"
               className="post_profile_img"
             />
@@ -32,7 +32,7 @@ const Post = () => {
         <div className="post_center">
           <span className="post_text">Testing my post :D</span>
           <img
-            src="https://github.com/safak/youtube/blob/react-social-ui/public/assets/post/1.jpeg?raw=true"
+            src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8ZG9nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
             alt=""
             className="post_img"
           />
