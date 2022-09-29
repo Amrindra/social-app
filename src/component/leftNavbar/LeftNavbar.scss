@@ -3,7 +3,7 @@
   //if we don't use calc here it will overflow because topNavbar is sitting on it so we have to subtract the height of topNavbar which 70px
   height: calc(100vh - 70px);
   position: sticky;
-  top: 50px;
+  top: 70px;
   // overflow-y: scroll;
 
   //   &::-webkit-scrollbar {

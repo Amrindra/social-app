@@ -1,5 +1,9 @@
 .rightNavbar {
   flex: 3.5;
+  // height: calc(100vh - 70px);
+  height: 100vh;
+  position: sticky;
+  top: 70px;
 
   .rightNavbar_wrapper,
   .rightBar_online_wrapper {
@@ -54,7 +58,7 @@
           width: 12px;
           height: 12px;
           border-radius: 50%;
-          background-color: greenyellow;
+          background-color: rgb(119, 193, 10);
           position: absolute;
           left: 0;
         }
