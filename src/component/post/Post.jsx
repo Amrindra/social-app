@@ -3,12 +3,12 @@ import {
   FavoriteBorder,
   MoreVert,
   ThumbUpAlt,
-  ThumbUpAltOutlined
+  ThumbUpAltOutlined,
 } from "@material-ui/icons";
 import { useState } from "react";
 import "./Post.scss";
 
-const Post = () => {
+const Post = ({ post }) => {
   const [likeIcon, setLikeIcon] = useState(false);
 
   return (
