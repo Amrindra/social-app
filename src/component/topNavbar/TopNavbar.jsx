@@ -16,10 +16,10 @@ const TopNavbar = () => {
       </div>
 
       <div className="topNavbar_right">
-        <div className="topNavbar_right_links">
+        {/* <div className="topNavbar_right_links">
           <span className="topNavbar_right_link">Homepage</span>
           <span className="topNavbar_right_link">Timeline</span>
-        </div>
+        </div> */}
 
         <div className="topNavbar_right_icons">
           <div className="topNavbar_right_icon_item">

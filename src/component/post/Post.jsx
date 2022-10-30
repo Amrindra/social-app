@@ -6,6 +6,7 @@ import {
   ThumbUpAltOutlined,
 } from "@material-ui/icons";
 import { useState } from "react";
+import { userData } from "../../utilities/data";
 import "./Post.scss";
 
 const Post = ({ post }) => {
@@ -21,8 +22,10 @@ const Post = ({ post }) => {
               alt="profile_picture"
               className="post_profile_img"
             />
-            <span className="post_user_name">King Dev</span>
-            <span className="post_date">10 mins ago</span>
+            <span className="post_user_name">
+              {userData.filter((user) => user.id === post?.userId)[0].username}
+            </span>
+            <span className="post_date">{post.timestamp}</span>
           </div>
           <div className="post_top_right">
             <MoreVert />
@@ -30,12 +33,8 @@ const Post = ({ post }) => {
         </div>
 
         <div className="post_center">
-          <span className="post_text">Testing my post :D</span>
-          <img
-            src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8ZG9nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
-            alt=""
-            className="post_img"
-          />
+          <span className="post_text">{post?.caption}</span>
+          <img src={post.photo} alt="" className="post_img" />
         </div>
 
         <div className="post_bottom">
@@ -46,10 +45,10 @@ const Post = ({ post }) => {
               <ThumbUpAltOutlined className="like_icon" />
             )}
             {likeIcon ? <Favorite /> : <FavoriteBorder className="like_icon" />}
-            <span className="post_like_counter">100</span>
+            <span className="post_like_counter">{post.like}</span>
           </div>
           <div className="post_bottom_right">
-            <span className="post_comment_text">10 comments</span>
+            <span className="post_comment_text">{post.comment} comments</span>
             <span className="post_share">10 shares</span>
           </div>
         </div>

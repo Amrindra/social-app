@@ -1,4 +1,4 @@
-export const Users = [
+export const userData = [
   {
     id: 1,
     profilePicture: "assets/person/1.jpeg",
@@ -54,8 +54,9 @@ export const Users = [
 export const postData = [
   {
     id: 1,
-    desc: "I learned Next.js",
-    photo: "assets/post/1.jpeg",
+    caption: "I just finished learning Next.js",
+    photo:
+      "https://www.datocms-assets.com/48401/1644864897-next-framework.jpeg?fit=max&w=900",
     timestamp: "5 mins ago",
     userId: 1,
     like: 32,
@@ -63,7 +64,8 @@ export const postData = [
   },
   {
     id: 2,
-    photo: "Omg! Next 13 just released",
+    caption: "Omg! Next 13 just released",
+    photo: "https://nextjs.org/static/blog/next-13/twitter-card.png",
     timestamp: "15 mins ago",
     userId: 2,
     like: 2,
@@ -71,8 +73,9 @@ export const postData = [
   },
   {
     id: 3,
-    desc: "My frontend skills",
-    photo: "assets/post/3.jpeg",
+    caption: "My frontend skills",
+    photo:
+      "https://cdn.august.com.au/wp-content/uploads/2015/04/Allan_Get-Web-Developer-Savvy_header.png",
     timestamp: "1 hour ago",
     userId: 3,
     like: 61,
@@ -80,7 +83,8 @@ export const postData = [
   },
   {
     id: 4,
-    photo: "assets/post/4.jpeg",
+    photo:
+      "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20220311094050/User-send-a-request-to.png",
     timestamp: "4 hours ago",
     userId: 4,
     like: 7,
@@ -88,7 +92,8 @@ export const postData = [
   },
   {
     id: 5,
-    photo: "assets/post/5.jpeg",
+    photo:
+      "https://www.datocms-assets.com/48401/1644864903-ssr-schema.png?fit=max&w=900",
     timestamp: "5 hours ago",
     userId: 5,
     like: 23,
@@ -96,7 +101,7 @@ export const postData = [
   },
   {
     id: 6,
-    photo: "assets/post/6.jpeg",
+    photo: "https://i.stack.imgur.com/0yBfc.png",
     timestamp: "1 day ago",
     userId: 6,
     like: 44,
@@ -104,8 +109,9 @@ export const postData = [
   },
   {
     id: 7,
-    desc: "guys, please check out my new projects",
-    photo: "assets/post/7.jpeg",
+    caption: "guys, please check out my new projects",
+    photo:
+      "https://user-images.githubusercontent.com/70451928/197416737-aa850344-8ff5-40c9-9f69-833eaeda7143.JPG",
     timestamp: "2 days ago",
     userId: 7,
     like: 52,
@@ -113,7 +119,7 @@ export const postData = [
   },
   {
     id: 8,
-    photo: "assets/post/8.jpeg",
+    photo: "https://miro.medium.com/max/1400/1*GNPDqDpo-W9b50xHZ3Yfpw.png",
     timestamp: "3 days ago",
     userId: 8,
     like: 15,
@@ -121,8 +127,8 @@ export const postData = [
   },
   {
     id: 9,
-    desc: "Can anyone help me with React router dom?",
-    photo: "assets/post/9.jpeg",
+    caption: "Can anyone help me with React router dom?",
+    photo: "https://miro.medium.com/max/1200/1*iQq9k0efhM-_L71rZF3Ufg.png",
     timestamp: "5 days ago",
     userId: 9,
     like: 11,
@@ -130,7 +136,8 @@ export const postData = [
   },
   {
     id: 10,
-    photo: "assets/post/10.jpeg",
+    photo:
+      "https://images.ctfassets.net/23aumh6u8s0i/JSDuXwmwFtaVPezoKvkij/bed30214cf17c2af6c3719a71652a67b/static-site-api-calls",
     timestamp: "1 week ago",
     userId: 10,
     like: 104,
