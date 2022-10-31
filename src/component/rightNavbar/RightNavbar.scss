@@ -1,7 +1,7 @@
 .rightNavbar {
   flex: 3.5;
-  // height: calc(100vh - 70px);
-  height: 100vh;
+  height: calc(100vh - 70px);
+  // height: 100vh;
   position: sticky;
   top: 70px;
 
@@ -25,6 +25,7 @@
 
   .rightBar_online_wrapper {
     margin-top: 20px;
+    overflow-y: scroll;
 
     .online_friend_title {
       margin-bottom: 20px;

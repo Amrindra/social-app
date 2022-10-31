@@ -12,7 +12,7 @@
   font-family: "Roboto", sans-serif;
 }
 
-/* body::-webkit-scrollbar {
+body::-webkit-scrollbar {
   width: 5px;
 }
 body::-webkit-scrollbar-track {
@@ -21,7 +21,7 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background-color: rgb(171, 81, 81);
-} */
+}
 
 /* body::-webkit-scrollbar {
   display: none;
