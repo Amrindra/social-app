@@ -1,12 +1,10 @@
 .rightNavbar {
   flex: 3.5;
   height: calc(100vh - 70px);
-  // height: 100vh;
   position: sticky;
   top: 70px;
 
-  .rightNavbar_wrapper,
-  .rightBar_online_wrapper {
+  .rightNavbar_wrapper {
     padding: 20px;
     margin-left: 10px;
     margin-right: 3px;
@@ -25,12 +23,19 @@
 
   .rightBar_online_wrapper {
     margin-top: 20px;
-    overflow-y: scroll;
+    padding: 20px;
+    margin-left: 10px;
+    margin-right: 3px;
+    border-radius: 10px;
 
     .online_friend_title {
       margin-bottom: 20px;
       font-size: 18px;
       font-weight: 500;
+    }
+
+    .scrolltest {
+      overflow-y: scroll;
     }
 
     .online_friend_list {

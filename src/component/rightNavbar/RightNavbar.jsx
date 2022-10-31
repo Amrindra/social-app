@@ -15,19 +15,25 @@ const RightNavbar = () => {
         </div>
       </div>
 
-      <div className="rightBar_online_wrapper">
-        <h4 className="online_friend_title">Online</h4>
-        {userData.map((user) => (
-          <ul className="online_friend_list">
-            <li className="online_friend" key={user.id}>
-              <div className="online_friend_profile_img">
-                <img src={user.profilePicture} alt="" className="profile_img" />
-                <span className="online_green_dot"></span>
-              </div>
-              <div className="online_friend_name">{user.username}</div>
-            </li>
-          </ul>
-        ))}
+      <div className="scrolltest">
+        <div className="rightBar_online_wrapper">
+          <h4 className="online_friend_title">Online</h4>
+          {userData.map((user) => (
+            <ul className="online_friend_list">
+              <li className="online_friend" key={user.id}>
+                <div className="online_friend_profile_img">
+                  <img
+                    src={user.profilePicture}
+                    alt=""
+                    className="profile_img"
+                  />
+                  <span className="online_green_dot"></span>
+                </div>
+                <div className="online_friend_name">{user.username}</div>
+              </li>
+            </ul>
+          ))}
+        </div>
       </div>
     </div>
   );
