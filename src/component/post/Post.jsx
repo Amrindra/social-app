@@ -12,13 +12,17 @@ import "./Post.scss";
 const Post = ({ post }) => {
   const [likeIcon, setLikeIcon] = useState(false);
 
+  const profileImage = userData.filter(
+    (profile) => profile.id === post?.userId
+  )[0].profilePicture;
+
   return (
     <div className="post_container">
       <div className="post_wrapper">
         <div className="post_top">
           <div className="post_top_left">
             <img
-              src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
+              src={profileImage}
               alt="profile_picture"
               className="post_profile_img"
             />

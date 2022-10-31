@@ -1,52 +1,62 @@
 export const userData = [
   {
     id: 1,
-    profilePicture: "assets/person/1.jpeg",
+    profilePicture:
+      "https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=400",
     username: "React Dev",
   },
   {
     id: 2,
-    profilePicture: "assets/person/2.jpeg",
+    profilePicture:
+      "https://images.pexels.com/photos/1759531/pexels-photo-1759531.jpeg?auto=compress&cs=tinysrgb&w=400",
     username: "Next Dev",
   },
   {
     id: 3,
-    profilePicture: "assets/person/3.jpeg",
+    profilePicture:
+      "https://images.pexels.com/photos/4588052/pexels-photo-4588052.jpeg?auto=compress&cs=tinysrgb&w=400",
     username: "Ninja Tech",
   },
   {
     id: 4,
-    profilePicture: "assets/person/4.jpeg",
+    profilePicture:
+      "https://images.pexels.com/photos/4588435/pexels-photo-4588435.jpeg?auto=compress&cs=tinysrgb&w=400",
     username: "Kungfu Panda",
   },
   {
     id: 5,
-    profilePicture: "assets/person/5.jpeg",
+    profilePicture:
+      "https://images.pexels.com/photos/33045/lion-wild-africa-african.jpg?auto=compress&cs=tinysrgb&w=400",
     username: "React Lover",
   },
   {
     id: 6,
-    profilePicture: "assets/person/6.jpeg",
+    profilePicture:
+      "https://images.pexels.com/photos/406014/pexels-photo-406014.jpeg?auto=compress&cs=tinysrgb&w=400",
     username: "Tech Savy",
   },
   {
     id: 7,
-    profilePicture: "assets/person/7.jpeg",
+    profilePicture:
+      "https://media.istockphoto.com/photos/illustration-of-smiling-happy-man-with-laptop-sitting-in-armchair-picture-id1226886130?b=1&k=20&m=1226886130&s=612x612&w=0&h=POIRcyGpS6RfNP-NLG7lvnqx5stn11diDBQnQE4sDkM=",
     username: "Mr. Dev",
   },
   {
     id: 8,
-    profilePicture: "assets/person/8.jpeg",
-    username: "",
+    profilePicture:
+      "https://media.istockphoto.com/photos/portrait-of-smiling-bearded-businessman-3d-illustration-of-cartoon-picture-id1222755058?b=1&k=20&m=1222755058&s=612x612&w=0&h=J8yMsCnBtUoW0XcF0rE-KVGrI5YWJOjIbMx5Adb9Uwk=",
+    username: "Daddy Coder",
   },
   {
     id: 9,
-    profilePicture: "assets/person/9.jpeg",
+    profilePicture:
+      "https://media.istockphoto.com/photos/businessman-silhouette-as-avatar-or-default-profile-picture-picture-id476085198?b=1&k=20&m=476085198&s=612x612&w=0&h=Ov2YWXw93vRJNKFtkoFjnVzjy_22VcLLXZIcAO25As4=",
     username: "Dev Lobster",
   },
   {
     id: 10,
-    profilePicture: "assets/person/10.jpeg",
+    profilePicture:
+      "https://media.istockphoto.com/photos/portrait-of-smiling-bearded-businessman-3d-illustration-of-cartoon-picture-id1222755058?b=1&k=20&m=1222755058&s=612x612&w=0&h=J8yMsCnBtUoW0XcF0rE-KVGrI5YWJOjIbMx5Adb9Uwk=",
     username: "NoCode noReact",
   },
 ];
