@@ -1,10 +1,11 @@
-.rightNavbar {
+.rightNavbar_container {
   flex: 3.5;
   height: calc(100vh - 70px);
+  overflow-y: scroll;
   position: sticky;
   top: 70px;
 
-  .rightNavbar_wrapper {
+  .rightNavbar_news {
     padding: 20px;
     margin-left: 10px;
     margin-right: 3px;
@@ -21,21 +22,15 @@
     }
   }
 
-  .rightBar_online_wrapper {
-    margin-top: 20px;
+  .rightBar_online {
     padding: 20px;
-    margin-left: 10px;
-    margin-right: 3px;
     border-radius: 10px;
+    margin: 20px 3px 0 10px;
 
     .online_friend_title {
       margin-bottom: 20px;
       font-size: 18px;
       font-weight: 500;
-    }
-
-    .scrolltest {
-      overflow-y: scroll;
     }
 
     .online_friend_list {

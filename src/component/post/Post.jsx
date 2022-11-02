@@ -10,7 +10,13 @@ import { userData } from "../../utilities/data";
 import "./Post.scss";
 
 const Post = ({ post }) => {
-  const [likeIcon, setLikeIcon] = useState(false);
+  const [isLoved, setIsLoved] = useState(false);
+  const [love, setLove] = useState(post.love);
+
+  const handleLike = () => {
+    setLove(isLoved ? love - 1 : love + 1);
+    setIsLoved(!isLoved);
+  };
 
   const profileImage = userData.filter(
     (profile) => profile.id === post?.userId
@@ -43,13 +49,17 @@ const Post = ({ post }) => {
 
         <div className="post_bottom">
           <div className="post_bottom_left">
-            {likeIcon ? (
-              <ThumbUpAlt />
+            {/* {isLiked ? (
+              <ThumbUpAlt className="like_icon" onClick={handleLike} />
             ) : (
-              <ThumbUpAltOutlined className="like_icon" />
+              <ThumbUpAltOutlined className="like_icon" onClick={handleLike} />
+            )} */}
+            {isLoved ? (
+              <Favorite className="like_icon" onClick={handleLike} />
+            ) : (
+              <FavoriteBorder className="like_icon" onClick={handleLike} />
             )}
-            {likeIcon ? <Favorite /> : <FavoriteBorder className="like_icon" />}
-            <span className="post_like_counter">{post.like}</span>
+            <span className="post_like_counter">{love}</span>
           </div>
           <div className="post_bottom_right">
             <span className="post_comment_text">{post.comment} comments</span>

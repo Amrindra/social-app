@@ -69,7 +69,7 @@ export const postData = [
       "https://www.datocms-assets.com/48401/1644864897-next-framework.jpeg?fit=max&w=900",
     timestamp: "5 mins ago",
     userId: 1,
-    like: 32,
+    love: 32,
     comment: 9,
   },
   {
@@ -78,7 +78,7 @@ export const postData = [
     photo: "https://nextjs.org/static/blog/next-13/twitter-card.png",
     timestamp: "15 mins ago",
     userId: 2,
-    like: 2,
+    love: 2,
     comment: 1,
   },
   {
@@ -88,7 +88,7 @@ export const postData = [
       "https://cdn.august.com.au/wp-content/uploads/2015/04/Allan_Get-Web-Developer-Savvy_header.png",
     timestamp: "1 hour ago",
     userId: 3,
-    like: 61,
+    love: 61,
     comment: 2,
   },
   {
@@ -97,7 +97,7 @@ export const postData = [
       "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20220311094050/User-send-a-request-to.png",
     timestamp: "4 hours ago",
     userId: 4,
-    like: 7,
+    love: 7,
     comment: 3,
   },
   {
@@ -106,7 +106,7 @@ export const postData = [
       "https://www.datocms-assets.com/48401/1644864903-ssr-schema.png?fit=max&w=900",
     timestamp: "5 hours ago",
     userId: 5,
-    like: 23,
+    love: 23,
     comment: 5,
   },
   {
@@ -114,7 +114,7 @@ export const postData = [
     photo: "https://i.stack.imgur.com/0yBfc.png",
     timestamp: "1 day ago",
     userId: 6,
-    like: 44,
+    love: 44,
     comment: 6,
   },
   {
@@ -124,7 +124,7 @@ export const postData = [
       "https://user-images.githubusercontent.com/70451928/197416737-aa850344-8ff5-40c9-9f69-833eaeda7143.JPG",
     timestamp: "2 days ago",
     userId: 7,
-    like: 52,
+    love: 52,
     comment: 3,
   },
   {
@@ -132,7 +132,7 @@ export const postData = [
     photo: "https://miro.medium.com/max/1400/1*GNPDqDpo-W9b50xHZ3Yfpw.png",
     timestamp: "3 days ago",
     userId: 8,
-    like: 15,
+    love: 15,
     comment: 1,
   },
   {
@@ -141,7 +141,7 @@ export const postData = [
     photo: "https://miro.medium.com/max/1200/1*iQq9k0efhM-_L71rZF3Ufg.png",
     timestamp: "5 days ago",
     userId: 9,
-    like: 11,
+    love: 11,
     comment: 2,
   },
   {
@@ -150,7 +150,7 @@ export const postData = [
       "https://images.ctfassets.net/23aumh6u8s0i/JSDuXwmwFtaVPezoKvkij/bed30214cf17c2af6c3719a71652a67b/static-site-api-calls",
     timestamp: "1 week ago",
     userId: 10,
-    like: 104,
+    love: 104,
     comment: 12,
   },
 ];

@@ -9,11 +9,11 @@ const Homepage = () => {
     <>
       <TopNavbar />
 
-      <secion className="homepage_container">
+      <section className="homepage_container">
         <LeftNavbar />
         <Feed />
         <RightNavbar />
-      </secion>
+      </section>
     </>
   );
 };
