@@ -8,6 +8,7 @@ const Feed = () => {
     <div className="feed">
       <div className="feed_wrapper">
         <Share />
+
         {postData.map((post) => (
           <Post key={post.id} post={post} />
         ))}

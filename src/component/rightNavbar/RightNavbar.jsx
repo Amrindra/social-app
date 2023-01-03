@@ -5,6 +5,7 @@ const RightNavbar = () => {
   return (
     <div className="rightNavbar_container">
       <div className="rightNavbar_news">
+        {/* News Section */}
         <h3>DevFam News</h3>
         <ul>
           <li>React 18 just released</li>
@@ -13,6 +14,7 @@ const RightNavbar = () => {
         </ul>
       </div>
 
+      {/* Online Friends section */}
       <div className="rightBar_online">
         <h4 className="online_friend_title">Online</h4>
         <ul className="online_friend_list">
