@@ -11,47 +11,35 @@ import {
   School
 } from "@material-ui/icons";
 
+const listItems = [
+  { icon: <RssFeed className="leftNavbar_icon" />, listName: "Feed" },
+  { icon: <Chat className="leftNavbar_icon" />, listName: "Chats" },
+  {
+    icon: <PlayCircleFilledOutlined className="leftNavbar_icon" />,
+    listName: "Video"
+  },
+  { icon: <Group className="leftNavbar_icon" />, listName: "Groups" },
+  { icon: <Bookmark className="leftNavbar_icon" />, listName: "Bookmarks" },
+  {
+    icon: <HelpOutline className="leftNavbar_icon" />,
+    listName: "Questions"
+  },
+  { icon: <WorkOutline className="leftNavbar_icon" />, listName: "Jobs" },
+  { icon: <Event className="leftNavbar_icon" />, listName: "Events" },
+  { icon: <School className="leftNavbar_icon" />, listName: "Courses" }
+];
+
 const LeftNavbar = () => {
   return (
     <div className="leftNavbar">
       <div className="leftNavbar_wrapper">
         <ul className="leftNavbar_lists">
-          <li className="leftNavbar_list_item">
-            <RssFeed className="leftNavbar_icon" />
-            <span className="leftNavbar_item_text">Feed</span>
-          </li>
-          <li className="leftNavbar_list_item">
-            <Chat className="leftNavbar_icon" />
-            <span className="leftNavbar_item_text">Chats</span>
-          </li>
-          <li className="leftNavbar_list_item">
-            <PlayCircleFilledOutlined className="leftNavbar_icon" />
-            <span className="leftNavbar_item_text">Videos</span>
-          </li>
-          <li className="leftNavbar_list_item">
-            <Group className="leftNavbar_icon" />
-            <span className="leftNavbar_item_text">Groups</span>
-          </li>
-          <li className="leftNavbar_list_item">
-            <Bookmark className="leftNavbar_icon" />
-            <span className="leftNavbar_item_text">Bookmarks</span>
-          </li>
-          <li className="leftNavbar_list_item">
-            <HelpOutline className="leftNavbar_icon" />
-            <span className="leftNavbar_item_text">Questions</span>
-          </li>
-          <li className="leftNavbar_list_item">
-            <WorkOutline className="leftNavbar_icon" />
-            <span className="leftNavbar_item_text">Jobs</span>
-          </li>
-          <li className="leftNavbar_list_item">
-            <Event className="leftNavbar_icon" />
-            <span className="leftNavbar_item_text">Events</span>
-          </li>
-          <li className="leftNavbar_list_item">
-            <School className="leftNavbar_icon" />
-            <span className="leftNavbar_item_text">Courses</span>
-          </li>
+          {listItems.map((item) => (
+            <li className="leftNavbar_list_item">
+              {item.icon}
+              <span className="leftNavbar_item_text">{item.listName}</span>
+            </li>
+          ))}
         </ul>
 
         <button className="leftNavbar_btn">Show more</button>
