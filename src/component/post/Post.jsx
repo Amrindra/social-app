@@ -3,7 +3,7 @@ import {
   FavoriteBorder,
   MoreVert,
   ThumbUpAlt,
-  ThumbUpAltOutlined,
+  ThumbUpAltOutlined
 } from "@material-ui/icons";
 import { useState } from "react";
 import { userData } from "../../utilities/data";
@@ -13,11 +13,12 @@ const Post = ({ post }) => {
   const [isLoved, setIsLoved] = useState(false);
   const [love, setLove] = useState(post.love);
 
-  const handleLike = () => {
+  const handleLove = () => {
     setLove(isLoved ? love - 1 : love + 1);
     setIsLoved(!isLoved);
   };
 
+  // Filter out the profile image
   const profileImage = userData.filter(
     (profile) => profile.id === post?.userId
   )[0].profilePicture;
@@ -55,9 +56,9 @@ const Post = ({ post }) => {
               <ThumbUpAltOutlined className="like_icon" onClick={handleLike} />
             )} */}
             {isLoved ? (
-              <Favorite className="like_icon" onClick={handleLike} />
+              <Favorite className="like_icon" onClick={handleLove} />
             ) : (
-              <FavoriteBorder className="like_icon" onClick={handleLike} />
+              <FavoriteBorder className="like_icon" onClick={handleLove} />
             )}
             <span className="post_like_counter">{love}</span>
           </div>
