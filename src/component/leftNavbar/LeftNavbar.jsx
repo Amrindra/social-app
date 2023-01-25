@@ -14,7 +14,8 @@ const LeftNavbar = () => {
           ))}
         </ul>
 
-        <button className="leftNavbar_btn">Show more</button>
+        {/* <button className="leftNavbar_btn">Show more</button> */}
+
         <hr />
         <ul className="leftNavbar_friend_lists">
           <li className="leftNavbar_friend">

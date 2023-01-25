@@ -1,95 +1,102 @@
-.topNavbar_wrapper{
-  height: 70px;
-  width: 100%;
+.topNavbar {
   background-color: var(--topNavbar-bg-color);
-  color: white;
-  display: flex;
-  align-items: center;
   position: sticky;
   top: 0;
   z-index: 999;
 
-  .topNavbar_left{
-    flex: 3;
-
-    .logo{
-      margin-left: 20px;
-      font-size: 24px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-  }
-
-  .topNavbar_center{
-    flex: 5;
-
-    .topNavbar_search{
-      background-color: white;
+  
+  .topNavbar_wrapper{
+      height: 70px;
       width: 100%;
-      height: 35px;
-      border-radius: 30px;
+      max-width: 1400px;
+      margin-left: auto;
+      margin-right: auto;
+      color: white;
       display: flex;
       align-items: center;
-
-      .search_icon{
-        color: black;
-        font-size: 20px;
-        margin-right: 10px;
-      }
+    
+    .topNavbar_left{
+      flex: 3;
       
-      .search_input{
-        margin-left: 10px;
-        border: none;
-        outline: none;
-        width: 100%;
+      .logo{
+        margin-left: 20px;
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
       }
     }
-  }
-
-  .topNavbar_right{
-    flex: 4;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    .topNavbar_right_link{
-      margin-right: 10px;
-      font-size: 14px;
-      cursor: pointer;
-    }
-
-    .topNavbar_right_icons{
-      display: flex;
-
-      .topNavbar_right_icon_item{
-        margin-right: 15px;
-        cursor: pointer;
-        position: relative;
-
-        .topNavbar_right_icon_badge{
-          position: absolute;
-          height: 15px;
-          width: 15px;
-          background-color: red;
-          border-radius: 50%;
-          top: -5px;
-          right: -5px;
-          font-size: 12px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
+    
+    .topNavbar_center{
+      flex: 5;
+      
+      .topNavbar_search{
+        background-color: white;
+        width: 100%;
+        height: 35px;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        
+        .search_icon{
+          color: black;
+          font-size: 20px;
+          margin-right: 10px;
+        }
+        
+        .search_input{
+          margin-left: 10px;
+          border: none;
+          outline: none;
+          width: 100%;
         }
       }
     }
-
-
-    .topNavbar_img{
-      height: 35px;
-      width: 35px;
-      object-fit: cover;
-      border-radius: 50%;
-      cursor: pointer;
+    
+    .topNavbar_right{
+      flex: 4;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      
+      .topNavbar_right_link{
+        margin-right: 10px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+      
+      .topNavbar_right_icons{
+        display: flex;
+        
+        .topNavbar_right_icon_item{
+          margin-right: 15px;
+          cursor: pointer;
+          position: relative;
+          
+          .topNavbar_right_icon_badge{
+            position: absolute;
+            height: 15px;
+            width: 15px;
+            background-color: red;
+            border-radius: 50%;
+            top: -5px;
+            right: -5px;
+            font-size: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+          }
+        }
+      }
+      
+      
+      .topNavbar_img{
+        height: 35px;
+        width: 35px;
+        object-fit: cover;
+        border-radius: 50%;
+        cursor: pointer;
+      }
     }
   }
 }

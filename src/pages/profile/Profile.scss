@@ -1,5 +1,8 @@
 .profile_container {
   display: flex;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 
   .profile_right{
     flex: 9;
