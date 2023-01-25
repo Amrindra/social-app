@@ -35,7 +35,7 @@ const LeftNavbar = () => {
       <div className="leftNavbar_wrapper">
         <ul className="leftNavbar_lists">
           {listItems.map((item) => (
-            <li className="leftNavbar_list_item">
+            <li className="leftNavbar_list_item" key={item.listName}>
               {item.icon}
               <span className="leftNavbar_item_text">{item.listName}</span>
             </li>
