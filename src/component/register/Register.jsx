@@ -1,4 +1,5 @@
 import React from "react";
+import "./RegisterStyle.scss";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
@@ -39,27 +40,53 @@ const RegisterForm = () => {
       onSubmit={onSubmit}
     >
       {({ isSubmitting }) => (
-        <Form>
-          <div>
-            <Field type="text" name="firstName" placeholder="First Name" />
-            <ErrorMessage name="firstName" component="div" />
-          </div>
-          <div>
-            <Field type="text" name="lastName" placeholder="Last Name" />
-            <ErrorMessage name="lastName" component="div" />
-          </div>
-          <div>
-            <Field type="email" name="email" placeholder="Email" />
-            <ErrorMessage name="email" component="div" />
-          </div>
-          <div>
-            <Field type="password" name="password" placeholder="Password" />
-            <ErrorMessage name="password" component="div" />
-          </div>
-          <button type="submit" disabled={isSubmitting}>
-            Submit
-          </button>
-        </Form>
+        <div className="register_form_container">
+          <Form className="register_form">
+            <div className="form_field">
+              <Field
+                className="input_field"
+                type="text"
+                name="firstName"
+                placeholder="First Name"
+              />
+              <ErrorMessage name="firstName" component="div" />
+            </div>
+            <div className="form_field">
+              <Field
+                className="input_field"
+                type="text"
+                name="lastName"
+                placeholder="Last Name"
+              />
+              <ErrorMessage name="lastName" component="div" />
+            </div>
+            <div className="form_field">
+              <Field
+                className="input_field"
+                type="email"
+                name="email"
+                placeholder="Email"
+              />
+              <ErrorMessage name="email" component="div" />
+            </div>
+            <div className="form_field">
+              <Field
+                className="input_field"
+                type="password"
+                name="password"
+                placeholder="Password"
+              />
+              <ErrorMessage name="password" component="div" />
+            </div>
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="submit_button"
+            >
+              Submit
+            </button>
+          </Form>
+        </div>
       )}
     </Formik>
   );
