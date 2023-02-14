@@ -69,6 +69,52 @@ const RegisterForm = () => {
                 className="error_message"
               />
             </div>
+
+            <div className="form_field">
+              <div className="form_DOB_wrapper">
+                <div className="form_date">
+                  <FormInput
+                    label="Day"
+                    type="number"
+                    name="email"
+                    value={values.email}
+                  />
+                  <ErrorMessage
+                    name="email"
+                    component="div"
+                    className="error_message"
+                  />
+                </div>
+                <div className="form_date">
+                  <FormInput
+                    label="Month"
+                    type="number"
+                    name="email"
+                    value={values.email}
+                  />
+                  <ErrorMessage
+                    name="email"
+                    component="div"
+                    className="error_message"
+                  />
+                </div>
+
+                <div className="form_date">
+                  <FormInput
+                    label="Year"
+                    type="number"
+                    name="email"
+                    value={values.email}
+                  />
+                  <ErrorMessage
+                    name="email"
+                    component="div"
+                    className="error_message"
+                  />
+                </div>
+              </div>
+            </div>
+
             <div className="form_field">
               <FormInput
                 label="Email"
