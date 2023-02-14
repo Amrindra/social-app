@@ -11,7 +11,11 @@ const FormInput = ({ label, ...otherAttributeProps }) => {
         <label
           // if input field is empty don't show labels
           className={`${
-            otherAttributeProps.value?.length > 0 ? "shrink" : null
+            otherAttributeProps.value.length > 0 ||
+            // equal underfined because the "otherAttributeProps.value.length" will give underfined
+            otherAttributeProps.value.length === undefined
+              ? "shrink"
+              : null
           } form-input-label`}
         >
           {label}

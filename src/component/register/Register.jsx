@@ -1,6 +1,6 @@
 import React from "react";
 import "./RegisterStyle.scss";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import FormInput from "../formInput/FormInput";
 
@@ -9,7 +9,10 @@ const RegisterForm = () => {
     firstName: "",
     lastName: "",
     email: "",
-    password: ""
+    password: "",
+    day: "",
+    month: "",
+    year: ""
   };
 
   const validationSchema = Yup.object().shape({
@@ -21,10 +24,22 @@ const RegisterForm = () => {
       .min(2, "Too Short!")
       .max(50, "Too Long!")
       .required("Last Name is required"),
-    email: Yup.string().email("Invalid email").required("Emial is required"),
+    email: Yup.string().email("Invalid email").required("Email is required"),
     password: Yup.string()
       .min(8, "Password must be at least 8 characters")
-      .required("Password is required")
+      .required("Password is required"),
+    day: Yup.number()
+      .min(1, "Must be 1 to 31")
+      .max(31, "Must 1 to 31")
+      .required("Day is required"),
+    month: Yup.number()
+      .min(1, "Must be 1 to 12")
+      .max(12, "Must be 1 to 12")
+      .required("Month is required"),
+    year: Yup.number()
+      .min(2, "Must be 1 to 31")
+      .max(3000, "Must 1 to 31")
+      .required("Year is required")
   });
 
   const onSubmit = (values, { setSubmitting }) => {
@@ -76,11 +91,11 @@ const RegisterForm = () => {
                   <FormInput
                     label="Day"
                     type="number"
-                    name="email"
-                    value={values.email}
+                    name="day"
+                    value={values.day}
                   />
                   <ErrorMessage
-                    name="email"
+                    name="day"
                     component="div"
                     className="error_message"
                   />
@@ -89,11 +104,11 @@ const RegisterForm = () => {
                   <FormInput
                     label="Month"
                     type="number"
-                    name="email"
-                    value={values.email}
+                    name="month"
+                    value={values.month}
                   />
                   <ErrorMessage
-                    name="email"
+                    name="month"
                     component="div"
                     className="error_message"
                   />
@@ -103,11 +118,11 @@ const RegisterForm = () => {
                   <FormInput
                     label="Year"
                     type="number"
-                    name="email"
-                    value={values.email}
+                    name="year"
+                    value={values.year}
                   />
                   <ErrorMessage
-                    name="email"
+                    name="year"
                     component="div"
                     className="error_message"
                   />
