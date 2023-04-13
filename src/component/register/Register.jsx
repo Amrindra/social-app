@@ -1,170 +1,108 @@
-import React from "react";
 import "./RegisterStyle.scss";
-import { Formik, Form, ErrorMessage } from "formik";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import FormInput from "../formInput/FormInput";
+
+const validationSchema = Yup.object().shape({
+  firstName: Yup.string().required("First name is required"),
+  lastName: Yup.string().required("Last name is required"),
+  dob: Yup.date().required("Date of birth is required"),
+  email: Yup.string().email("Invalid email").required("Email is required"),
+  password: Yup.string()
+    .min(6, "Password must be at least 6 characters")
+    .required("Password is required"),
+  confirmPassword: Yup.string()
+    .oneOf([Yup.ref("password"), null], "Passwords must match")
+    .required("Confirm password is required")
+});
 
 const RegisterForm = () => {
   const initialValues = {
     firstName: "",
     lastName: "",
+    dob: "",
     email: "",
     password: "",
-    day: "",
-    month: "",
-    year: ""
+    confirmPassword: ""
   };
 
-  const validationSchema = Yup.object().shape({
-    firstName: Yup.string()
-      .min(2, "Too Short!")
-      .max(50, "Too Long!")
-      .required("First Name is required"),
-    lastName: Yup.string()
-      .min(2, "Too Short!")
-      .max(50, "Too Long!")
-      .required("Last Name is required"),
-    email: Yup.string().email("Invalid email").required("Email is required"),
-    password: Yup.string()
-      .min(8, "Password must be at least 8 characters")
-      .required("Password is required"),
-    day: Yup.number()
-      .min(1, "Must be 1 to 31")
-      .max(31, "Must 1 to 31")
-      .required("Day is required"),
-    month: Yup.number()
-      .min(1, "Must be 1 to 12")
-      .max(12, "Must be 1 to 12")
-      .required("Month is required"),
-    year: Yup.number()
-      .min(2, "Must be 1 to 31")
-      .max(3000, "Must 1 to 31")
-      .required("Year is required")
-  });
-
-  const onSubmit = (values, { setSubmitting }) => {
-    setTimeout(() => {
-      console.log(JSON.stringify(values, null, 2));
-      setSubmitting(false);
-    }, 400);
+  const handleSubmit = (values) => {
+    console.log(values);
   };
 
   return (
     <Formik
       initialValues={initialValues}
       validationSchema={validationSchema}
-      onSubmit={onSubmit}
+      onSubmit={handleSubmit}
     >
-      {({ isSubmitting, values }) => (
-        <div className="register_form_container">
-          <Form className="register_form">
-            <div className="form_field">
-              <FormInput
-                label="First Name"
-                type="text"
-                name="firstName"
-                value={values.firstName}
-              />
-              <ErrorMessage
-                name="firstName"
-                component="div"
-                className="error_message"
-              />
-            </div>
-            <div className="form_field">
-              <FormInput
-                label="Last Name"
-                type="text"
-                name="lastName"
-                value={values.lastName}
-              />
-              <ErrorMessage
-                name="lastName"
-                component="div"
-                className="error_message"
-              />
-            </div>
+      {({ errors, touched }) => (
+        <Form className="register_form">
+          <div className="register_form_wrapper">
+            <h3>User Registration</h3>
 
-            <div className="form_field">
-              <div className="form_DOB_wrapper">
-                <div className="form_date">
-                  <FormInput
-                    label="Day"
-                    type="number"
-                    name="day"
-                    value={values.day}
-                  />
-                  <ErrorMessage
-                    name="day"
-                    component="div"
-                    className="error_message"
-                  />
-                </div>
-                <div className="form_date">
-                  <FormInput
-                    label="Month"
-                    type="number"
-                    name="month"
-                    value={values.month}
-                  />
-                  <ErrorMessage
-                    name="month"
-                    component="div"
-                    className="error_message"
-                  />
-                </div>
-
-                <div className="form_date">
-                  <FormInput
-                    label="Year"
-                    type="number"
-                    name="year"
-                    value={values.year}
-                  />
-                  <ErrorMessage
-                    name="year"
-                    component="div"
-                    className="error_message"
-                  />
-                </div>
+            <div className="register_name_field">
+              <div className="form_input_items">
+                <label htmlFor="firstName">First Name</label>
+                <Field
+                  className="input_field"
+                  type="text"
+                  name="firstName"
+                  placeholder="First Name"
+                />
+                <ErrorMessage component="span" name="firstName" />
+              </div>
+              <div className="form_input_items">
+                <label htmlFor="lastName">Last Name</label>
+                <Field
+                  className="input_field"
+                  type="text"
+                  name="lastName"
+                  placeholder="Last Name"
+                />
+                <ErrorMessage component="span" name="lastName" />
               </div>
             </div>
 
-            <div className="form_field">
-              <FormInput
-                label="Email"
+            <div className="form_input_items">
+              <label htmlFor="dob">Date of Birth</label>
+              <Field className="input_field" type="date" name="dob" />
+              <ErrorMessage name="dob" component="span" />
+            </div>
+
+            <div className="form_input_items">
+              <label htmlFor="email">Email</label>
+              <Field
+                className="input_field"
                 type="email"
                 name="email"
-                value={values.email}
+                placeholder="Email"
               />
-              <ErrorMessage
-                name="email"
-                component="div"
-                className="error_message"
-              />
+              <ErrorMessage component="span" name="email" />
             </div>
-            <div className="form_field">
-              <FormInput
-                label="Password"
+            <div className="form_input_items">
+              <label htmlFor="password">Password</label>
+              <Field
+                className="input_field"
                 type="password"
                 name="password"
-                value={values.password}
+                placeholder="Password"
               />
-              <ErrorMessage
-                name="password"
-                component="div"
-                className="error_message"
-              />
+              <ErrorMessage component="span" name="password" />
             </div>
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="submit_button"
-            >
-              Submit
-            </button>
-          </Form>
-        </div>
+
+            <div className="form_input_items">
+              <label htmlFor="confirmPassword">Confirm Password</label>
+              <Field
+                className="input_field"
+                type="password"
+                name="confirmPassword"
+                placeholder="Confirm Password"
+              />
+              <ErrorMessage component="span" name="confirmPassword" />
+            </div>
+            <button type="submit">Submit</button>
+          </div>
+        </Form>
       )}
     </Formik>
   );

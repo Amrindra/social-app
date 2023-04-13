@@ -36,6 +36,7 @@ const Post = ({ post }) => {
             <span className="post_user_name">
               {userData.filter((user) => user.id === post?.userId)[0].username}
             </span>
+
             <span className="post_date">{post.timestamp}</span>
           </div>
           <div className="post_top_right">

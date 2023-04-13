@@ -1,50 +1,64 @@
-.register_form_container{
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  // background-color: gray;
-
-  .register_form{
+.register_form{
+    // background-color: gray;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;  
-    gap: 1rem;
-    padding: 50px;
-    border: 4px solid gray;
-    border-radius: 10px;
-    // width: 500px;
+    align-items: center;
+    
+ 
+    .register_form_wrapper{
+      border: 2px solid white;
+      padding: 50px;
+      border-radius: 10px;
+      // width: 50%;
+      -webkit-box-shadow: var(--webkit-box-shadow);
+      box-shadow: var(--box-shadow);
+      background-color: white;
+      // width: 500px;
 
-
-    .form_field{
-      .error_message{
-        color: red;
+      h3{
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 10px;
       }
 
-      .form_DOB_wrapper{
+      .register_name_field{
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 20px;
 
+      }
+      
+      
+      .form_input_items{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+        font-size: 1.2rem;
+        
+        span{
+          color: red;
+        }
 
+        .input_field{
+          padding: 10px;
+          border-radius: 5px;
+          border: 1px solid lightgray;
+          margin: 10px 0;
+          font-size: 1.2rem;
+          
+          &::placeholder{
+            // font-size: 1.2rem;
+            // border:none;
+            // border: none;
+          }
 
-        .form-input{
-          width: 100px;
+          &:focus{
+          }
         }
       }
     }
 
-    button{
-      width: 300px;
-      padding: 15px;
-      font-size: 1.2rem;
-      font-weight: 500;
-      border-radius: 10px;
-      background-color: black;
-      color: white;
-      cursor: pointer;
-    }
   }
-}
