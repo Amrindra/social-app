@@ -1,12 +1,11 @@
 
 .register_form{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    .register_form_container{
+  .register_form_container{
       -webkit-box-shadow: var(--webkit-box-shadow);
       box-shadow: var(--box-shadow);
       display: flex;
@@ -14,60 +13,58 @@
       align-items: center;
       padding: 50px;
       border-radius: 10px;
-      
-      
-      .register_form_wrapper{
-        padding-bottom: 20px;
-        
+
       h3{
         text-align: center;
         font-size: 2rem;
         margin-bottom: 10px;
       }
-      
+
       .register_name_field{
         display: flex;
         justify-content: center;
         align-items: center;
       }
       
-      
       .form_input_items{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 10px;
+        padding: 10px 10px 0px 10px;
         font-size: 1.2rem;
         width: 100%;
         
-        
-        span{
-          color: red;
-        }
-        
-        .input_field{
+        input{
           padding: 10px;
           border-radius: 5px;
           border: 1px solid lightgray;
-          // margin: 10px 0;
           font-size: 1.2rem;
-          
+          width: 100%;
         }
-      }
-      
+
+        .error_message, span{
+          color: red;
+        }
+
+    //This error_alt is just used to help when errors pop up, it won't shift the elements
+        .error_alt{
+          visibility: hidden;
+        }
     }
-        button{
-          padding: 10px;
-          width: 200px;
-          font-size: 1.2rem;
-          border-radius: 10px;
-          border: none;
-          
-          
-          &:hover{
-            cursor: pointer;
-            background-color: lightgray;
-          }
-        }
+
+    button{
+      padding: 10px;
+      width: 200px;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      border: none;
+      margin-top: 20px;
+      
+      &:hover{
+        cursor: pointer;
+        background-color: lightgray;
+      }
+    }
   }
 }
+
