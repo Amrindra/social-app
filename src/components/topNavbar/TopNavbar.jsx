@@ -3,7 +3,7 @@ import "./TopNavbar.scss";
 
 const TopNavbar = () => {
   return (
-    <div className="topNavbar">
+    <nav className="topNavbar">
       <div className="topNavbar_wrapper">
         <div className="topNavbar_left">
           <span className="logo">DevFam</span>
@@ -21,11 +21,6 @@ const TopNavbar = () => {
         </div>
 
         <div className="topNavbar_right">
-          {/* <div className="topNavbar_right_links">
-          <span className="topNavbar_right_link">Homepage</span>
-          <span className="topNavbar_right_link">Timeline</span>
-        </div> */}
-
           <div className="topNavbar_right_icons">
             <div className="topNavbar_right_icon_item">
               <Person />
@@ -48,7 +43,7 @@ const TopNavbar = () => {
           />
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 
