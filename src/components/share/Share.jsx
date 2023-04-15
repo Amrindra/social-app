@@ -1,4 +1,5 @@
 import { EmojiEmotions, Label, PermMedia, Room } from "@material-ui/icons";
+import Button from "../button/Button";
 import "./Share.scss";
 
 const Share = () => {

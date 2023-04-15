@@ -1,0 +1,19 @@
+.button_wrapper{
+  button{
+    // padding: 10px;
+    height: 40px;
+    width: 70px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid white;
+    background: none;
+    color: white;
+
+    &:hover{
+      cursor: pointer;
+      background-color: white;
+      color: black;
+    }
+  }
+}

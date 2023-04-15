@@ -12,7 +12,7 @@
   font-family: "Roboto", sans-serif;
 }
 
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
   width: 5px;
 }
 body::-webkit-scrollbar-track {
@@ -21,7 +21,7 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background-color: rgb(171, 81, 81);
-}
+} */
 
 /* body::-webkit-scrollbar {
   display: none;
@@ -32,4 +32,13 @@ hr {
   border-width: 0;
   color: lightgray;
   background-color: lightgray;
+}
+
+/* Remove all the a tag default value */
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
 }

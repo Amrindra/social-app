@@ -1,4 +1,6 @@
 import { Chat, Notifications, Person, Search } from "@material-ui/icons";
+import { Link } from "react-router-dom";
+import Button from "../button/Button";
 import "./TopNavbar.scss";
 
 const TopNavbar = () => {
@@ -6,7 +8,9 @@ const TopNavbar = () => {
     <nav className="topNavbar">
       <div className="topNavbar_wrapper">
         <div className="topNavbar_left">
-          <span className="logo">DevFam</span>
+          <Link>
+            <span className="logo">DevFam</span>
+          </Link>
         </div>
 
         <div className="topNavbar_center">
@@ -36,11 +40,16 @@ const TopNavbar = () => {
             </div>
           </div>
 
-          <img
+          {/* <img
             src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZG9nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
             alt=""
             className="topNavbar_img"
-          />
+          /> */}
+          <div className="login">
+            <Link to="/register">
+              <Button>Login</Button>
+            </Link>
+          </div>
         </div>
       </div>
     </nav>

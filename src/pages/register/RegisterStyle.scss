@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #fcfdfe;
 
   .register_form_container{
       -webkit-box-shadow: var(--webkit-box-shadow);
@@ -11,7 +12,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 50px;
+      padding: 30px;
       border-radius: 10px;
 
       h3{
@@ -37,6 +38,10 @@
         padding: 10px 10px 0px 10px;
         font-size: 1.2rem;
         width: 100%;
+
+        label{
+          // color: #528da1;
+        }
         
         input{
           padding: 10px;
@@ -68,6 +73,11 @@
         cursor: pointer;
         background-color: lightgray;
       }
+    }
+
+    .register_option_message{
+      margin-top: 20px;
+      cursor: pointer;
     }
   }
 }
