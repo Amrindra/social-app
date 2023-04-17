@@ -8,7 +8,7 @@ const TopNavbar = () => {
     <nav className="topNavbar">
       <div className="topNavbar_wrapper">
         <div className="topNavbar_left">
-          <Link>
+          <Link to="/">
             <span className="logo">DevFam</span>
           </Link>
         </div>
@@ -46,7 +46,7 @@ const TopNavbar = () => {
             className="topNavbar_img"
           /> */}
           <div className="login">
-            <Link to="/register">
+            <Link to="/authentication">
               <Button>Login</Button>
             </Link>
           </div>

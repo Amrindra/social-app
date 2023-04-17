@@ -1,19 +1,29 @@
-
-.register_form{
-  height: 100vh;
+@mixin flex-box($flex-property: "", $direction: "") {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: $flex-property;
+  flex-direction: $direction;
+}
+
+$light-gray-color: lightgray;
+$gray-color: gray;
+
+
+.login_form{
+  height: 100vh;
+  @include flex-box(center);
   background-color: #fcfdfe;
 
-  .register_form_container{
+  @media screen and (max-width: 680px){
+    // height: 80vh;
+  }
+
+  .login_form_container{
       -webkit-box-shadow: var(--webkit-box-shadow);
       box-shadow: var(--box-shadow);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       padding: 30px;
       border-radius: 10px;
+      @include flex-box("",column);
 
       h3{
         text-align: center;
@@ -21,34 +31,32 @@
         margin-bottom: 10px;
       }
 
-      .register_name_field{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      .login_name_field{
+        @include flex-box(center);
 
         @media screen and (max-width: 680px){
-          flex-direction: column;
+          // flex-direction: column;
         }
       }
       
       .form_input_items{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @include flex-box(center,column);
+        align-items: flex-start;
         padding: 10px 10px 0px 10px;
         font-size: 1.2rem;
         width: 100%;
-
-        label{
-          // color: #528da1;
-        }
         
+        label{
+          color: $gray-color;
+        }
+   
         input{
           padding: 10px;
           border-radius: 5px;
-          border: 1px solid lightgray;
+          border: 1px solid $light-gray-color;
           font-size: 1.2rem;
           width: 100%;
+          margin-top: 10px;
         }
 
         .error_message, span{
@@ -59,6 +67,15 @@
         .error_alt{
           visibility: hidden;
         }
+
+        @media screen and (max-width: 680px){
+          padding: 0;
+          font-size: 1rem;
+
+          input{
+            font-size: 1rem;
+          }
+         }
     }
 
     button{
@@ -71,11 +88,11 @@
       
       &:hover{
         cursor: pointer;
-        background-color: lightgray;
+        background-color: $light-gray-color;
       }
     }
 
-    .register_option_message{
+    .login_option_message{
       margin-top: 20px;
       cursor: pointer;
     }

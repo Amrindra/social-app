@@ -1,3 +1,8 @@
+@mixin flex-box {
+  display: flex;
+  align-items: center;
+}
+
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -27,8 +32,7 @@
       list-style: none;
 
       .leftNavbar_list_item {
-        display: flex;
-        align-items: center;
+        @include flex-box;
         margin-bottom: 20px;
       }
     }
@@ -55,8 +59,7 @@
       list-style: none;
 
       .leftNavbar_friend {
-        display: flex;
-        align-items: center;
+        @include flex-box;
         margin-bottom: 15px;
 
         .leftNavbar_friend_img {

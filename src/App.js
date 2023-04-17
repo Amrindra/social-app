@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Profile from "./pages/profile/Profile";
 import Homepage from "./pages/homepage/Homepage";
-import RegisterForm from "./pages/register/Register";
-import "./styles.css";
+import Login from "./pages/login/Login";
+import "./styles.scss";
 
 export default function App() {
   return (
@@ -14,7 +14,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/register" element={<RegisterForm />} />
+          <Route path="/authentication" element={<Login />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,8 +1,44 @@
-import "./RegisterStyle.scss";
+import "./LoginStyle.scss";
 import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useState } from "react";
+
+const initialValuesRegister = {
+  firstName: "",
+  lastName: "",
+  dateOfBirth: "",
+  email: "",
+  password: "",
+  confirmPassword: ""
+};
+
+const initialValuesLogin = {
+  email: "",
+  password: ""
+};
+
+const registerSchema = Yup.object().shape({
+  firstName: Yup.string()
+    .max(15, "Must be 15 characters or less")
+    .required("Required"),
+  lastName: Yup.string()
+    .max(20, "Must be 20 characters or less")
+    .required("Required"),
+  dateOfBirth: Yup.date().required("Required"),
+  email: Yup.string().email("Invalid email address").required("Required"),
+  password: Yup.string()
+    .min(8, "Password must be at least 8 characters")
+    .required("Required"),
+  confirmPassword: Yup.string()
+    .oneOf([Yup.ref("password"), null], "Passwords must match")
+    .required("Required")
+});
+
+const loginSchema = Yup.object().shape({
+  email: Yup.string().email("invalid email").required("required"),
+  password: Yup.string().required("required")
+});
 
 const RegistrationForm = () => {
   const [pageType, setPageType] = useState("login");
@@ -11,41 +47,8 @@ const RegistrationForm = () => {
   const isRegister = pageType === "register";
 
   const formik = useFormik({
-    initialValues: {
-      firstName: "",
-      lastName: "",
-      dateOfBirth: "",
-      email: "",
-      password: "",
-      confirmPassword: ""
-    },
-
-    // initialValuesLogin: {
-    //   email: "",
-    //   password: ""
-    // },
-
-    registerSchema: Yup.object().shape({
-      firstName: Yup.string()
-        .max(15, "Must be 15 characters or less")
-        .required("Required"),
-      lastName: Yup.string()
-        .max(20, "Must be 20 characters or less")
-        .required("Required"),
-      dateOfBirth: Yup.date().required("Required"),
-      email: Yup.string().email("Invalid email address").required("Required"),
-      password: Yup.string()
-        .min(8, "Password must be at least 8 characters")
-        .required("Required"),
-      confirmPassword: Yup.string()
-        .oneOf([Yup.ref("password"), null], "Passwords must match")
-        .required("Required")
-    }),
-
-    loginSchema: Yup.object().shape({
-      email: Yup.string().email("invalid email").required("required"),
-      password: Yup.string().required("required")
-    }),
+    initialValues: isLogin ? initialValuesLogin : initialValuesRegister,
+    validationSchema: isLogin ? loginSchema : registerSchema,
 
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
@@ -54,13 +57,13 @@ const RegistrationForm = () => {
   });
 
   return (
-    <div className="register_form">
-      <form onSubmit={formik.handleSubmit} className="register_form_container">
+    <div className="login_form">
+      <form onSubmit={formik.handleSubmit} className="login_form_container">
         <h3>{isLogin ? "Welcome to DEVFAM" : "User Registration"}</h3>
 
         {isRegister && (
           <>
-            <div className="register_name_field">
+            <div className="login_name_field">
               <div className="form_input_items">
                 <label htmlFor="firstName">
                   First Name <span>*</span>
@@ -190,7 +193,7 @@ const RegistrationForm = () => {
         <button type="submit">{isLogin ? "Login" : "Register"}</button>
 
         <span
-          className="register_option_message"
+          className="login_option_message"
           onClick={() => {
             setPageType(isLogin ? "register" : "login");
             formik.resetForm();
