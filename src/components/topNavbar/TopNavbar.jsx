@@ -3,7 +3,8 @@ import {
   Chat,
   Notifications,
   Person,
-  Search
+  Search,
+  WbSunny
 } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import Button from "../button/Button";
@@ -58,7 +59,11 @@ const TopNavbar = () => {
               className="topNavbar_right_icon_item"
               onClick={handleDarkModeToggle}
             >
-              <Brightness4 />
+              {isDarkMode ? (
+                <WbSunny style={{ color: "yellow" }} />
+              ) : (
+                <Brightness4 />
+              )}
             </div>
           </div>
 

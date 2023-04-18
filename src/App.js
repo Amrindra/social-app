@@ -3,10 +3,19 @@ import Profile from "./pages/profile/Profile";
 import Homepage from "./pages/homepage/Homepage";
 import Login from "./pages/login/Login";
 import "./styles.scss";
+import { useSelector } from "react-redux";
 
 export default function App() {
+  const isDarkMode = useSelector((state) => state.theme.isDarkMode);
+
   return (
-    <div className="app">
+    <div
+      className="app"
+      style={{
+        backgroundColor: isDarkMode && "#191919",
+        color: isDarkMode && "white"
+      }}
+    >
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Homepage />} />
