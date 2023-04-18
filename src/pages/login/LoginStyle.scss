@@ -56,7 +56,11 @@ $gray-color: gray;
           border: 1px solid $light-gray-color;
           font-size: 1.2rem;
           width: 100%;
-          margin-top: 10px;
+          margin-top: 10px;  
+        }
+
+        input[type="date"]{
+          color: $gray-color;
         }
 
         .error_message, span{

@@ -1,9 +1,24 @@
-import { Chat, Notifications, Person, Search } from "@material-ui/icons";
+import {
+  Brightness4,
+  Chat,
+  Notifications,
+  Person,
+  Search
+} from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import Button from "../button/Button";
 import "./TopNavbar.scss";
+import { useSelector, useDispatch } from "react-redux";
+import { toggleDarkMode } from "../../reduxGlobalState/slices/darkModeSlice";
 
 const TopNavbar = () => {
+  const isDarkMode = useSelector((state) => state.theme.isDarkMode);
+  const dispatch = useDispatch();
+
+  const handleDarkModeToggle = () => {
+    dispatch(toggleDarkMode);
+  };
+
   return (
     <nav className="topNavbar">
       <div className="topNavbar_wrapper">
@@ -37,6 +52,10 @@ const TopNavbar = () => {
             <div className="topNavbar_right_icon_item">
               <Notifications />
               <span className="topNavbar_right_icon_badge">9</span>
+            </div>
+
+            <div className="topNavbar_right_icon_item">
+              <Brightness4 />
             </div>
           </div>
 

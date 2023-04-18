@@ -7,13 +7,10 @@ import "./styles.scss";
 export default function App() {
   return (
     <div className="app">
-      {/* <Profile /> */}
-      {/* <RegisterForm /> */}
-
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/profile/:userId" element={<Profile />} />
           <Route path="/authentication" element={<Login />} />
         </Routes>
       </BrowserRouter>
