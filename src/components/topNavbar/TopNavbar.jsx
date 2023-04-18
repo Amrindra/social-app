@@ -16,7 +16,7 @@ const TopNavbar = () => {
   const dispatch = useDispatch();
 
   const handleDarkModeToggle = () => {
-    dispatch(toggleDarkMode);
+    dispatch(toggleDarkMode());
   };
 
   return (
@@ -54,7 +54,10 @@ const TopNavbar = () => {
               <span className="topNavbar_right_icon_badge">9</span>
             </div>
 
-            <div className="topNavbar_right_icon_item">
+            <div
+              className="topNavbar_right_icon_item"
+              onClick={handleDarkModeToggle}
+            >
               <Brightness4 />
             </div>
           </div>
