@@ -1,8 +1,11 @@
 import { EmojiEmotions, Label, PermMedia, Room } from "@material-ui/icons";
+import { useSelector } from "react-redux";
 import Button from "../button/Button";
 import "./Share.scss";
 
 const Share = () => {
+  const isDarkMode = useSelector((state) => state.theme.isDarkMode);
+
   return (
     <div className="share_container">
       <div className="share_wrapper">
@@ -16,6 +19,7 @@ const Share = () => {
             type="text"
             placeholder="Start a post"
             className="share_input"
+            // style={{isDarkMode ? color: "white" : ""}}
           />
         </div>
 
@@ -31,10 +35,10 @@ const Share = () => {
               <Label htmlColor="blue" className="share_icon" />
               <span className="share_option_text">Tag</span>
             </div>
-            <div className="share_option_item">
+            {/* <div className="share_option_item">
               <EmojiEmotions htmlColor="tomato" className="share_icon" />
               <span className="share_option_text">Feelings</span>
-            </div>
+            </div> */}
             <div className="share_option_item">
               <Room htmlColor="orange" className="share_icon" />
               <span className="share_option_text">Location </span>

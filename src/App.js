@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Profile from "./pages/profile/Profile";
 import Homepage from "./pages/homepage/Homepage";
 import Login from "./pages/login/Login";
@@ -12,17 +12,15 @@ export default function App() {
     <div
       className="app"
       style={{
-        backgroundColor: isDarkMode && "#191919",
+        backgroundColor: isDarkMode && "#212121",
         color: isDarkMode && "white"
       }}
     >
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/profile/:userId" element={<Profile />} />
-          <Route path="/authentication" element={<Login />} />
-        </Routes>
-      </BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/profile/:userId" element={<Profile />} />
+        <Route path="/authentication" element={<Login />} />
+      </Routes>
     </div>
   );
 }

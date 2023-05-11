@@ -6,12 +6,14 @@ import {
   ThumbUpAltOutlined
 } from "@material-ui/icons";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import { userData } from "../../utilities/data";
 import "./Post.scss";
 
 const Post = ({ post }) => {
   const [isLoved, setIsLoved] = useState(false);
   const [love, setLove] = useState(post.love);
+  const isDarkMode = useSelector((state) => state.theme.isDarkMode);
 
   const handleLove = () => {
     setLove(isLoved ? love - 1 : love + 1);
@@ -24,7 +26,12 @@ const Post = ({ post }) => {
   )[0].profilePicture;
 
   return (
-    <div className="post_container">
+    <div
+      className="post_container"
+      style={{
+        backgroundColor: isDarkMode && "#333333"
+      }}
+    >
       <div className="post_wrapper">
         <div className="post_top">
           <div className="post_top_left">

@@ -12,7 +12,7 @@ $gray-color: gray;
 .login_form{
   height: 100vh;
   @include flex-box(center);
-  background-color: #fcfdfe;
+  background-color:#f0f2f5fe;
 
   @media screen and (max-width: 680px){
     // height: 80vh;
@@ -23,6 +23,7 @@ $gray-color: gray;
       box-shadow: var(--box-shadow);
       padding: 30px;
       border-radius: 10px;
+      background-color: white;
       @include flex-box("",column);
 
       h3{
@@ -56,7 +57,7 @@ $gray-color: gray;
           border: 1px solid $light-gray-color;
           font-size: 1.2rem;
           width: 100%;
-          margin-top: 10px;  
+          margin-top: 5px;  
         }
 
         input[type="date"]{
@@ -65,6 +66,8 @@ $gray-color: gray;
 
         .error_message, span{
           color: red;
+          text-transform: capitalize;
+          font-size: 1rem;
         }
 
     //This error_alt is just used to help when errors pop up, it won't shift the elements
@@ -89,16 +92,20 @@ $gray-color: gray;
       border-radius: 10px;
       border: none;
       margin-top: 20px;
+      background-color: #000000;
+      color: white;
       
       &:hover{
         cursor: pointer;
-        background-color: $light-gray-color;
+        background-color: #242424;
       }
     }
 
     .login_option_message{
       margin-top: 20px;
       cursor: pointer;
+      color: #66c4ff;
+      text-decoration: underline;
     }
   }
 }

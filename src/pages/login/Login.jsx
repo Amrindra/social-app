@@ -3,6 +3,7 @@ import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 
 const initialValuesRegister = {
   firstName: "",
@@ -46,6 +47,8 @@ const RegistrationForm = () => {
   const isLogin = pageType === "login";
   const isRegister = pageType === "register";
 
+  const isDarkMode = useSelector((state) => state.theme.isDarkMode);
+
   const formik = useFormik({
     initialValues: isLogin ? initialValuesLogin : initialValuesRegister,
     validationSchema: isLogin ? loginSchema : registerSchema,
@@ -57,7 +60,13 @@ const RegistrationForm = () => {
   });
 
   return (
-    <div className="login_form">
+    <div
+      className="login_form"
+      style={{
+        backgroundColor: isDarkMode && "#212121",
+        color: isDarkMode && "black"
+      }}
+    >
       <form onSubmit={formik.handleSubmit} className="login_form_container">
         <h3>{isLogin ? "Welcome to DEVFAM" : "User Registration"}</h3>
 
@@ -65,9 +74,9 @@ const RegistrationForm = () => {
           <>
             <div className="login_name_field">
               <div className="form_input_items">
-                <label htmlFor="firstName">
+                {/* <label htmlFor="firstName">
                   First Name <span>*</span>
-                </label>
+                </label> */}
 
                 <input
                   id="firstName"
@@ -84,10 +93,11 @@ const RegistrationForm = () => {
                   <div className="error_alt">invisible</div>
                 )}
               </div>
+
               <div className="form_input_items">
-                <label htmlFor="lastName">
+                {/* <label htmlFor="lastName">
                   Last Name <span>*</span>
-                </label>
+                </label> */}
                 <input
                   id="lastName"
                   name="lastName"
@@ -127,9 +137,9 @@ const RegistrationForm = () => {
         )}
 
         <div className="form_input_items">
-          <label htmlFor="email">
+          {/* <label htmlFor="email">
             Email <span>*</span>
-          </label>
+          </label> */}
           <input
             id="email"
             name="email"
@@ -147,9 +157,9 @@ const RegistrationForm = () => {
         </div>
 
         <div className="form_input_items">
-          <label htmlFor="password">
+          {/* <label htmlFor="password">
             Password <span>*</span>
-          </label>
+          </label> */}
           <input
             id="password"
             name="password"
@@ -168,9 +178,9 @@ const RegistrationForm = () => {
 
         {isRegister && (
           <div className="form_input_items">
-            <label htmlFor="confirmPassword">
+            {/* <label htmlFor="confirmPassword">
               Confirm Password <span>*</span>
-            </label>
+            </label> */}
             <input
               id="confirmPassword"
               name="confirmPassword"
