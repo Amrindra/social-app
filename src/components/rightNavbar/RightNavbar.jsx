@@ -16,7 +16,7 @@ const RightNavbar = () => {
 
       {/* Online Friends section */}
       <div className="rightBar_online">
-        <h4 className="online_friend_title">Online people</h4>
+        <h4 className="online_friend_title">Online Fams</h4>
         <ul className="online_friend_list">
           {userData.map((user) => (
             <li className="online_friend" key={user.id}>

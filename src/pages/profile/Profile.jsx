@@ -1,10 +1,37 @@
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import Feed from "../../components/feed/Feed";
 import LeftNavbar from "../../components/leftNavbar/LeftNavbar";
 import RightNavbar from "../../components/rightNavbar/RightNavbar";
 import TopNavbar from "../../components/topNavbar/TopNavbar";
+import { userData } from "../../utilities/data";
 import "./Profile.scss";
+// import axios from "axios";
 
 const Profile = () => {
+  const params = useParams();
+  const { userId } = params;
+
+  // const [userData, setUserData] = useState(null);
+
+  // useEffect(() => {
+  //   // Fetch user data using the userId
+  //   axios
+  //     .get(`https://ubbbj4.csb.app/profile/${userId}`)
+  //     .then((response) => {
+  //       setUserData(response.data);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error fetching user data:", error);
+  //     });
+  // }, [userId]);
+  const profileData = {
+    coverImage: userData[userId - 1].coverImage,
+    profileImage: userData[userId - 1].profilePicture,
+    username: userData[userId - 1].username,
+    bio: userData[userId - 1].bio
+  };
+
   return (
     <div className="profile">
       <TopNavbar />
@@ -17,19 +44,19 @@ const Profile = () => {
             <div className="profile_cover">
               <img
                 className="profile_coverImg"
-                src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZG9nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
+                src={profileData.coverImage}
                 alt=""
               />
               <img
                 className="profile_userImg"
-                src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZG9nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60g"
+                src={profileData.profileImage}
                 alt=""
               />
             </div>
 
             <div className="profile_info">
-              <h4 className="profile_info_name">Amrin</h4>
-              <span className="profile_bio">What's up fam!</span>
+              <h4 className="profile_info_name">{profileData.username}</h4>
+              <span className="profile_bio">{profileData.bio}</span>
             </div>
           </div>
 

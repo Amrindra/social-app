@@ -1,63 +1,89 @@
 export const userData = [
   {
     id: 1,
+    username: "React Dev",
+    bio: "What's up Fam!",
     profilePicture:
       "https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=400",
-    username: "React Dev"
+    coverImage:
+      "https://www.datocms-assets.com/48401/1644864897-next-framework.jpeg?fit=max&w=900"
   },
   {
     id: 2,
+    bio: "What's up Fam!",
+    username: "Next Dev",
     profilePicture:
       "https://images.pexels.com/photos/1759531/pexels-photo-1759531.jpeg?auto=compress&cs=tinysrgb&w=400",
-    username: "Next Dev"
+    coverImage: "https://nextjs.org/static/blog/next-13/twitter-card.png"
   },
   {
     id: 3,
+    username: "Ninja Tech",
+    bio: "What's up Fam!",
     profilePicture:
       "https://images.pexels.com/photos/4588052/pexels-photo-4588052.jpeg?auto=compress&cs=tinysrgb&w=400",
-    username: "Ninja Tech"
+    coverImage:
+      "https://cdn.august.com.au/wp-content/uploads/2015/04/Allan_Get-Web-Developer-Savvy_header.png"
   },
   {
     id: 4,
+    username: "Kungfu Panda",
+    bio: "What's up Fam!",
     profilePicture:
       "https://images.pexels.com/photos/4588435/pexels-photo-4588435.jpeg?auto=compress&cs=tinysrgb&w=400",
-    username: "Kungfu Panda"
+    coverImage:
+      "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20220311094050/User-send-a-request-to.png"
   },
   {
     id: 5,
+    bio: "What's up Fam!",
+    username: "React Lover",
     profilePicture:
       "https://images.pexels.com/photos/33045/lion-wild-africa-african.jpg?auto=compress&cs=tinysrgb&w=400",
-    username: "React Lover"
+    coverImage:
+      "https://www.datocms-assets.com/48401/1644864903-ssr-schema.png?fit=max&w=900"
   },
   {
     id: 6,
+    username: "Tech Savy",
+    bio: "What's up Fam!",
     profilePicture:
       "https://images.pexels.com/photos/406014/pexels-photo-406014.jpeg?auto=compress&cs=tinysrgb&w=400",
-    username: "Tech Savy"
+    coverImage: "https://i.stack.imgur.com/0yBfc.png"
   },
   {
     id: 7,
+    username: "Mr. Dev",
+    bio: "What's up Fam!",
     profilePicture:
       "https://media.istockphoto.com/photos/illustration-of-smiling-happy-man-with-laptop-sitting-in-armchair-picture-id1226886130?b=1&k=20&m=1226886130&s=612x612&w=0&h=POIRcyGpS6RfNP-NLG7lvnqx5stn11diDBQnQE4sDkM=",
-    username: "Mr. Dev"
+    coverImage:
+      "https://user-images.githubusercontent.com/70451928/197416737-aa850344-8ff5-40c9-9f69-833eaeda7143.JPG"
   },
   {
     id: 8,
+    username: "Daddy Coder",
+    bio: "What's up Fam!",
     profilePicture:
       "https://media.istockphoto.com/photos/portrait-of-smiling-bearded-businessman-3d-illustration-of-cartoon-picture-id1222755058?b=1&k=20&m=1222755058&s=612x612&w=0&h=J8yMsCnBtUoW0XcF0rE-KVGrI5YWJOjIbMx5Adb9Uwk=",
-    username: "Daddy Coder"
+    coverImage: "https://miro.medium.com/max/1400/1*GNPDqDpo-W9b50xHZ3Yfpw.png"
   },
   {
     id: 9,
+    username: "Dev Lobster",
+    bio: "What's up Fam!",
     profilePicture:
       "https://media.istockphoto.com/photos/businessman-silhouette-as-avatar-or-default-profile-picture-picture-id476085198?b=1&k=20&m=476085198&s=612x612&w=0&h=Ov2YWXw93vRJNKFtkoFjnVzjy_22VcLLXZIcAO25As4=",
-    username: "Dev Lobster"
+    coverImage: "https://miro.medium.com/max/1200/1*iQq9k0efhM-_L71rZF3Ufg.png"
   },
   {
     id: 10,
+    username: "NoCode noReact",
+    bio: "What's up Fam!",
     profilePicture:
       "https://media.istockphoto.com/photos/portrait-of-smiling-bearded-businessman-3d-illustration-of-cartoon-picture-id1222755058?b=1&k=20&m=1222755058&s=612x612&w=0&h=J8yMsCnBtUoW0XcF0rE-KVGrI5YWJOjIbMx5Adb9Uwk=",
-    username: "NoCode noReact"
+    coverImage:
+      "https://images.ctfassets.net/23aumh6u8s0i/JSDuXwmwFtaVPezoKvkij/bed30214cf17c2af6c3719a71652a67b/static-site-api-calls"
   }
 ];
 

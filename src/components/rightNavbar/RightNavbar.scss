@@ -5,6 +5,10 @@
   position: sticky;
   top: 70px;
 
+  &::-webkit-scrollbar {
+   display: none;
+} 
+
   .rightNavbar_news {
     padding: 20px;
     margin-left: 10px;

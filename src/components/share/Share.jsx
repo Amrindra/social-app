@@ -19,7 +19,7 @@ const Share = () => {
             type="text"
             placeholder="Start a post"
             className="share_input"
-            // style={{isDarkMode ? color: "white" : ""}}
+            style={{ color: isDarkMode && "white" }}
           />
         </div>
 
@@ -28,23 +28,31 @@ const Share = () => {
         <div className="share_bottom">
           <div className="share_options">
             <div className="share_option_item">
-              <PermMedia htmlColor="lightblue" className="share_icon" />
+              <PermMedia
+                htmlColor={isDarkMode && "white"}
+                className="share_icon"
+              />
               <span className="share_option_text">Photo or Video</span>
             </div>
-            <div className="share_option_item">
+            {/* <div className="share_option_item">
               <Label htmlColor="blue" className="share_icon" />
               <span className="share_option_text">Tag</span>
             </div>
-            {/* <div className="share_option_item">
-              <EmojiEmotions htmlColor="tomato" className="share_icon" />
-              <span className="share_option_text">Feelings</span>
-            </div> */}
             <div className="share_option_item">
               <Room htmlColor="orange" className="share_icon" />
               <span className="share_option_text">Location </span>
-            </div>
+            </div> */}
           </div>
-          <button className="share_button">Share</button>
+          <div className="share_button">
+            <button
+              style={{
+                color: isDarkMode ? "white" : "black",
+                border: isDarkMode ? "" : "2px solid black"
+              }}
+            >
+              Share
+            </button>
+          </div>
         </div>
       </div>
     </div>
