@@ -1,4 +1,10 @@
-.homepage_container{
-    display: flex;
-    width: 100%; 
+@import "../../styles/variable.scss";
+
+.homepage{
+    @include max-width;
+
+    .homepage_container{
+        display: flex;
+        width: 100%; 
+    }
 }

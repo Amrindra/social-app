@@ -32,9 +32,9 @@ const TopNavbar = () => {
         <div className="topNavbar_center">
           <div className="topNavbar_search">
             <input
-              className="search_input"
               placeholder="Search.."
               type="search"
+              className="search_input"
             />
             <Search className="search_icon" />
           </div>
@@ -42,19 +42,6 @@ const TopNavbar = () => {
 
         <div className="topNavbar_right">
           <div className="topNavbar_right_icons">
-            <div className="topNavbar_right_icon_item">
-              <Person />
-              <span className="topNavbar_right_icon_badge">10</span>
-            </div>
-            <div className="topNavbar_right_icon_item">
-              <Chat />
-              <span className="topNavbar_right_icon_badge">2</span>
-            </div>
-            <div className="topNavbar_right_icon_item">
-              <Notifications />
-              <span className="topNavbar_right_icon_badge">9</span>
-            </div>
-
             <div
               className="topNavbar_right_icon_item"
               onClick={handleDarkModeToggle}
@@ -64,6 +51,18 @@ const TopNavbar = () => {
               ) : (
                 <Brightness4 />
               )}
+            </div>
+            <div className="topNavbar_right_icon_item">
+              <Person />
+              <span className="topNavbar_right_icon_badge">1</span>
+            </div>
+            <div className="topNavbar_right_icon_item">
+              <Chat />
+              <span className="topNavbar_right_icon_badge">5</span>
+            </div>
+            <div className="topNavbar_right_icon_item">
+              <Notifications />
+              <span className="topNavbar_right_icon_badge">10</span>
             </div>
           </div>
 

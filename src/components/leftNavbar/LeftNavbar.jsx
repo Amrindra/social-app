@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { listItems } from "../../utilities/leftNavbarData";
 import "./LeftNavbar.scss";
 
@@ -7,10 +8,12 @@ const LeftNavbar = () => {
       <div className="leftNavbar_wrapper">
         <ul className="leftNavbar_lists">
           {listItems.map((item) => (
-            <li className="leftNavbar_list_item" key={item.listName}>
-              {item.icon}
-              <span className="leftNavbar_item_text">{item.listName}</span>
-            </li>
+            <Link to={item.link} key={item.listName}>
+              <li className="leftNavbar_list_item">
+                {item.icon}
+                <span className="leftNavbar_item_text">{item.listName}</span>
+              </li>
+            </Link>
           ))}
         </ul>
 

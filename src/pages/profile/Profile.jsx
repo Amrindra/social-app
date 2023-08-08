@@ -6,7 +6,7 @@ import "./Profile.scss";
 
 const Profile = () => {
   return (
-    <>
+    <div className="profile">
       <TopNavbar />
 
       <div className="profile_container">
@@ -39,7 +39,7 @@ const Profile = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

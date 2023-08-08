@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import Profile from "./pages/profile/Profile";
 import Homepage from "./pages/homepage/Homepage";
 import Login from "./pages/login/Login";
-import "./styles.scss";
+import "./index.scss";
 import { useSelector } from "react-redux";
 
 export default function App() {

@@ -7,12 +7,13 @@ import {
 } from "@material-ui/icons";
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { userData } from "../../utilities/data";
 import "./Post.scss";
 
 const Post = ({ post }) => {
   const [isLoved, setIsLoved] = useState(false);
-  const [love, setLove] = useState(post.love);
+  const [love, setLove] = useState(post.loveTotal);
   const isDarkMode = useSelector((state) => state.theme.isDarkMode);
 
   const handleLove = () => {
@@ -34,18 +35,24 @@ const Post = ({ post }) => {
     >
       <div className="post_wrapper">
         <div className="post_top">
-          <div className="post_top_left">
-            <img
-              src={profileImage}
-              alt="profile_picture"
-              className="post_profile_img"
-            />
-            <span className="post_user_name">
-              {userData.filter((user) => user.id === post?.userId)[0].username}
-            </span>
+          <Link to={`/profile/${post.id}`}>
+            <div className="post_top_left">
+              <img
+                src={profileImage}
+                alt="profile_picture"
+                className="post_profile_img"
+              />
+              <span className="post_user_name">
+                {
+                  userData.filter((user) => user.id === post?.userId)[0]
+                    .username
+                }
+              </span>
 
-            <span className="post_date">{post.timestamp}</span>
-          </div>
+              <span className="post_date">{post.timestamp}</span>
+            </div>
+          </Link>
+
           <div className="post_top_right">
             <MoreVert />
           </div>
@@ -64,7 +71,11 @@ const Post = ({ post }) => {
               <ThumbUpAltOutlined className="like_icon" onClick={handleLike} />
             )} */}
             {isLoved ? (
-              <Favorite className="like_icon" onClick={handleLove} />
+              <Favorite
+                className="like_icon"
+                onClick={handleLove}
+                style={{ color: "red" }}
+              />
             ) : (
               <FavoriteBorder className="like_icon" onClick={handleLove} />
             )}

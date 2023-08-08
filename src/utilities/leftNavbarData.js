@@ -11,7 +11,11 @@ import {
 } from "@material-ui/icons";
 
 export const listItems = [
-  { icon: <RssFeed className="leftNavbar_icon" />, listName: "Feed" },
+  {
+    icon: <RssFeed className="leftNavbar_icon" />,
+    listName: "Feed",
+    link: "/"
+  },
   { icon: <Chat className="leftNavbar_icon" />, listName: "Chats" },
   {
     icon: <PlayCircleFilledOutlined className="leftNavbar_icon" />,
@@ -23,7 +27,7 @@ export const listItems = [
     icon: <HelpOutline className="leftNavbar_icon" />,
     listName: "Questions"
   },
-  { icon: <WorkOutline className="leftNavbar_icon" />, listName: "Jobs" },
+  { icon: <WorkOutline className="leftNavbar_icon" />, listName: "Careers" },
   { icon: <Event className="leftNavbar_icon" />, listName: "Events" },
-  { icon: <School className="leftNavbar_icon" />, listName: "Courses" }
+  { icon: <School className="leftNavbar_icon" />, listName: "Education" }
 ];
