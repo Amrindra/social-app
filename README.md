@@ -25,6 +25,7 @@ DevFam is built using the following technologies:
 - SCSS: A powerful CSS extension language that enhances the styling capabilities of CSS. SCSS provides features like variables, nesting, and mixins, making styling more maintainable and modular.
 - Express.js: A flexible and minimalistic web application framework for Node.js. It provides a robust set of features for building web applications, such as routing, middleware support, and server-side rendering.
 - MongoDB: A popular NoSQL database that stores data in flexible, JSON-like documents. MongoDB is a scalable and high-performance database solution, well-suited for applications with rapidly changing requirements.
+- Redux: is an open-source JavaScript library that is commonly used with frameworks like React to manage the state of an application. It provides a predictable and centralized way to manage the state of your application, making it easier to maintain and reason about your application's data flow.
 
 # Installation
 
