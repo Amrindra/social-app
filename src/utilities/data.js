@@ -1,8 +1,8 @@
 export const userData = [
   {
     id: 1,
-    username: "React Dev",
-    bio: "What's up Fam!",
+    username: "Amrin Dev",
+    bio: "A very passionate developer.",
     profilePicture:
       "https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=400",
     coverImage:
