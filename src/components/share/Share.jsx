@@ -1,6 +1,5 @@
 import { EmojiEmotions, Label, PermMedia, Room } from "@material-ui/icons";
 import { useSelector } from "react-redux";
-import Button from "../button/Button";
 import "./Share.scss";
 
 const Share = () => {
@@ -29,7 +28,7 @@ const Share = () => {
           <div className="share_options">
             <div className="share_option_item">
               <PermMedia
-                htmlColor={isDarkMode && "white"}
+                // htmlColor={isDarkMode ? "white" : undefined}
                 className="share_icon"
               />
               <span className="share_option_text">Photo or Video</span>

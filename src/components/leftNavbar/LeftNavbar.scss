@@ -1,3 +1,5 @@
+@import "../../styles/responsive.scss";
+
 @mixin flex-box {
   display: flex;
   align-items: center;
@@ -23,8 +25,16 @@
   top: 70px;
   overflow-y: scroll;
 
+  @include sm{
+    flex: 1;
+  }
+
   .leftNavbar_wrapper {
     padding: 20px;
+
+    @include sm{
+      padding: 10px;
+    }
 
     .leftNavbar_lists {
       padding: 0;
@@ -34,6 +44,12 @@
       .leftNavbar_list_item {
         @include flex-box;
         margin-bottom: 20px;
+
+        .leftNavbar_item_text{
+          @include sm{
+            display: none;
+          }
+        }
       }
     }
 

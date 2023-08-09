@@ -1,9 +1,15 @@
+@import "../../styles/responsive.scss";
+
 .rightNavbar_container {
   flex: 3;
   height: calc(100vh - 70px);
   overflow-y: scroll;
   position: sticky;
   top: 70px;
+
+  @include sm{
+    display: none;
+  }
 
   &::-webkit-scrollbar {
    display: none;

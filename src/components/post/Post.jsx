@@ -21,6 +21,8 @@ const Post = ({ post }) => {
     setIsLoved(!isLoved);
   };
 
+  console.log(1);
+
   // Filter out the profile image
   const profileImage = userData.filter(
     (profile) => profile.id === post?.userId

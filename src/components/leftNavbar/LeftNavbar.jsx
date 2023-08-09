@@ -19,7 +19,7 @@ const LeftNavbar = () => {
 
         {/* <button className="leftNavbar_btn">Show more</button> */}
 
-        <hr />
+        {/* <hr />
         <ul className="leftNavbar_friend_lists">
           <li className="leftNavbar_friend">
             <img
@@ -29,7 +29,7 @@ const LeftNavbar = () => {
             />
             <span className="leftNavbar_friend_name">Lorem ipsum</span>
           </li>
-        </ul>
+        </ul> */}
       </div>
     </div>
   );

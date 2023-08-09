@@ -1,3 +1,5 @@
+@import "../../styles/responsive.scss";
+
 .button_wrapper{
   button{
     // padding: 10px;
@@ -9,6 +11,13 @@
     border: 2px solid white;
     background: none;
     color: white;
+
+    @include sm{
+      height: 30px;
+      width: 60px;
+      border: 1px solid white;
+      font-size: 0.8rem;
+    }
 
     &:hover{
       cursor: pointer;
