@@ -1,4 +1,4 @@
-import { EmojiEmotions, Label, PermMedia, Room } from "@material-ui/icons";
+import { EmojiEmotions, Label, PermMedia, Room } from "@mui/icons-material";
 import { useSelector } from "react-redux";
 import "./Share.scss";
 
@@ -46,7 +46,7 @@ const Share = () => {
             <button
               style={{
                 color: isDarkMode ? "white" : "black",
-                border: isDarkMode ? "" : "2px solid black"
+                border: isDarkMode ? "" : "2px solid black",
               }}
             >
               Share

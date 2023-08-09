@@ -3,8 +3,8 @@ import {
   FavoriteBorder,
   MoreVert,
   ThumbUpAlt,
-  ThumbUpAltOutlined
-} from "@material-ui/icons";
+  ThumbUpAltOutlined,
+} from "@mui/icons-material";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -32,7 +32,7 @@ const Post = ({ post }) => {
     <div
       className="post_container"
       style={{
-        backgroundColor: isDarkMode && "#333333"
+        backgroundColor: isDarkMode && "#333333",
       }}
     >
       <div className="post_wrapper">

@@ -4,8 +4,8 @@ import {
   Notifications,
   Person,
   Search,
-  WbSunny
-} from "@material-ui/icons";
+  WbSunny,
+} from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import Button from "../button/Button";
 import "./TopNavbar.scss";
