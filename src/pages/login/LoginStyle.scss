@@ -1,3 +1,5 @@
+@import "../../styles/responsive.scss";
+
 @mixin flex-box($flex-property: "", $direction: "") {
   display: flex;
   align-items: center;
@@ -14,8 +16,8 @@ $gray-color: gray;
   @include flex-box(center);
   background-color:#f0f2f5fe;
 
-  @media screen and (max-width: 680px){
-    // height: 80vh;
+  @include sm{
+    padding: 10px;
   }
 
   .login_form_container{
