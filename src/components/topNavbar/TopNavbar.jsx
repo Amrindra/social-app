@@ -73,7 +73,7 @@ const TopNavbar = () => {
           /> */}
           <div className="login">
             <Link to="/authentication">
-              <Button>Login</Button>
+              <Button className="login_btn">Login</Button>
             </Link>
           </div>
         </div>
