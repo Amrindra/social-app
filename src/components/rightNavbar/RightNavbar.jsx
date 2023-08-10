@@ -21,7 +21,11 @@ const RightNavbar = () => {
           {userData.map((user) => (
             <li className="online_friend" key={user.id}>
               <div className="online_friend_profile_img">
-                <img src={user.profilePicture} alt="" className="profile_img" />
+                <img
+                  src={user.profilePicture}
+                  alt={user.username}
+                  className="profile_img"
+                />
                 <span className="online_green_dot"></span>
               </div>
               <div className="online_friend_name">{user.username}</div>

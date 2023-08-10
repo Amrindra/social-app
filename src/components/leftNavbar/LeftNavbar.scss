@@ -29,6 +29,10 @@
     flex: 1;
   }
 
+  @include md{
+    flex: 1;
+  }
+
   .leftNavbar_wrapper {
     padding: 20px;
 
@@ -47,6 +51,10 @@
 
         .leftNavbar_item_text{
           @include sm{
+            display: none;
+          }
+
+          @include md{
             display: none;
           }
         }
@@ -88,4 +96,58 @@
       }
     }
   }
+
+  // This class name comes from the RightNavbar component
+  .rightNavbar_container{
+    // on larger screen will display none, but on the small device will display
+    display: none;
+
+    @include md{
+      display: block;
+      position: static;
+    }
+
+    .rightNavbar_news{
+      @include md{
+        display: none;
+      }
+    }
+
+    .rightBar_online{
+      @include md{
+        padding: 5px;
+        margin: 0;
+      }
+
+      .online_friend_title{
+        @include md{
+          display: none;
+        }
+      }
+
+      .online_friend_list{
+        .online_friend{   
+          .online_friend_profile_img {
+            @include md{
+              margin-left: 0px;
+            }
+            
+            .profile_img {
+              @include md{
+              width: 30px;
+              height: 30px;
+            }
+          }
+        }
+        
+        .online_friend_name {
+          @include md{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
 }

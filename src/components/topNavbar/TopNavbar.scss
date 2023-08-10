@@ -24,6 +24,7 @@
 
         @include sm {
           font-size: 18px;
+          margin-left: 15px;
         }
       }
     }
@@ -40,7 +41,14 @@
         align-items: center;
 
         @include sm {
-          display: none;
+          width: 90%;
+          height: 30px;
+          // margin-left: 10px;
+        }
+
+        @include md {
+          width: 90%;
+          margin-left: 10px;
         }
         
         .search_icon{
@@ -79,7 +87,7 @@
           position: relative;
 
           @include sm{
-            margin-right: 8px;
+            margin-right: 4px;
           }
           
           .topNavbar_right_icon_badge{

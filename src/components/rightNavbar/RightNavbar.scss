@@ -11,6 +11,10 @@
     display: none;
   }
 
+  @include md{
+    display: none;
+  }
+
   &::-webkit-scrollbar {
    display: none;
 } 

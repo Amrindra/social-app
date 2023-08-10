@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { listItems } from "../../utilities/leftNavbarData";
 import "./LeftNavbar.scss";
+import RightNavbar from "../rightNavbar/RightNavbar";
 
 const LeftNavbar = () => {
   return (
@@ -30,6 +31,10 @@ const LeftNavbar = () => {
             <span className="leftNavbar_friend_name">Lorem ipsum</span>
           </li>
         </ul> */}
+
+        <div className="online_friends_on_mobile">
+          <RightNavbar />
+        </div>
       </div>
     </div>
   );
