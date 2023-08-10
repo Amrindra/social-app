@@ -1,4 +1,4 @@
-import { EmojiEmotions, Label, PermMedia, Room } from "@mui/icons-material";
+import PermMedia from "@mui/icons-material/PermMedia";
 import { useSelector } from "react-redux";
 import "./Share.scss";
 

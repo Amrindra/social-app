@@ -1,10 +1,6 @@
-import {
-  Favorite,
-  FavoriteBorder,
-  MoreVert,
-  ThumbUpAlt,
-  ThumbUpAltOutlined,
-} from "@mui/icons-material";
+import Favorite from "@mui/icons-material/Favorite";
+import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
+import MoreVert from "@mui/icons-material/MoreVert";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";

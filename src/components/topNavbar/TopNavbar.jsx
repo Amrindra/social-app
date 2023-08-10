@@ -1,11 +1,9 @@
-import {
-  Brightness4,
-  Chat,
-  Notifications,
-  Person,
-  Search,
-  WbSunny,
-} from "@mui/icons-material";
+import Brightness4 from "@mui/icons-material/Brightness4";
+import Chat from "@mui/icons-material/Chat";
+import Notifications from "@mui/icons-material/Notifications";
+import Person from "@mui/icons-material/Person";
+import Search from "@mui/icons-material/Search";
+import WbSunny from "@mui/icons-material/WbSunny";
 import { Link } from "react-router-dom";
 import Button from "../button/Button";
 import "./TopNavbar.scss";
