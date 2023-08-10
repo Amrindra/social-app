@@ -12,25 +12,22 @@
 //   background-color: #f1f1f1;
 // }
 
-::-webkit-scrollbar-thumb {
-  // background-color: rgb(215, 22, 22);
-  background-color: none;
-}
 
 .leftNavbar {
-  flex: 3;
+  flex: 2;
   //if we don't use calc here it will overflow because topNavbar is sitting on it so we have to subtract the height of topNavbar which 70px
   height: calc(100vh - 70px);
   position: sticky;
   top: 70px;
-  overflow-y: scroll;
-
+  
   @include sm{
     flex: 1;
   }
 
   @include md{
     flex: 1;
+    overflow-y: scroll;
+    overflow: hidden;
   }
 
   .leftNavbar_wrapper {
@@ -47,7 +44,13 @@
 
       .leftNavbar_list_item {
         @include flex-box;
-        margin-bottom: 20px;
+        // margin-bottom: 20px;
+        padding: 10px;
+
+        &:hover{
+          background-color: rgba(211, 211, 211, .25);
+          border-radius: 5px;
+        }
 
         .leftNavbar_item_text{
           @include sm{
